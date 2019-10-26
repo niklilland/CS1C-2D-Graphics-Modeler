@@ -1,0 +1,28 @@
+---- USER STORY #2----
+
+#2 As a user, I can save and upload shapes
+  a) Description:
+       A user can save their own shapes and upload them for all users to see publicly.
+       A user can see other users shapes that have been uploaded
+       Adminstrators must approve or reject uploaded shaped before they are uploaded.
+  b) Tasks:
+       As a user, I can upload my own shapes and view other users shapes.
+       As a adminstrator, I can review shapes thare are pending for review and approve or reject them.
+  c) Tests:
+       Verify that a user can upload shapes online.
+       Verify that a user can view other users shapes.
+       Verify that uploaded shapes are put in pending for adminstrators to approve or reject.
+       Verify that adminstrators can approve or reject user submitted shapes.
+       Verify that users are notified if there shape has been reject or approved.
+       Verify that only approved shapes are shown to oter users.
+  d) Assignee:
+       ???
+  e) Estimation: ??
+  f) Priority: ??
+  g) Done:
+       A user is able to upload their own created shapes for others to view as well as view other
+       users created shapes.
+       A adminstrator is able to approve or reject all pending for upload shapes before are posted.
+       A user is notified if their shape has been approved or rejected.
+       Only approved shapes are avaliable for others to view.
+

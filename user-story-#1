@@ -1,0 +1,23 @@
+---- USER STORY #1----
+#1 As a user, I am able to contact/message an adminstrator.
+  a) Description:
+       A user can message/contact an adminstrator for any techinical help, issues, etc.
+       A adminstrator will be able to see these message in their inbox and respond to the user
+       The user will receive the admins response in their inbox the next time they log in.
+  b) Tasks:
+       As a user, I can message and receive messages from adminstrators.
+       As a adminstrator, I can respond to user messages.
+  c) Tests:
+       Verify that a user can contact adminstrators.
+       Verify that a adminstrator can receive user messages.
+       Verify that messages are sent to the correct users/adminstrators
+       Verify that users/adminstrators can reply to messages sent to them.
+  d) Assignee:
+       ???
+  e) Estimation: ??
+  f) Priority: ??
+  g) Done:
+       User can contact/message adminstrators about any issues or questions.
+       Adminstrators can see these user sent messages and reply to them.
+       Users can receive replies in their inbox and respond to these replies.
+       All tasks and tests are passed.

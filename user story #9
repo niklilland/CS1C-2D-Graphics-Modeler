@@ -1,1 +1,24 @@
+---- USER STORY #9----
 
+#9 As a user, I can view a shape report of all shapes sorted by area
+
+  a) Description:
+       A user can view shapes without sorting.
+       A user can view shapes with sorting by area.
+       A user cannot view unshared or rejected shapes when sorting by area.
+  b) Tasks:
+      As a user, I can view my own shapes and view other users' shapes.
+      As a user, I can view shape reports with sorting by area, which sorts all of the shape reports by area.
+  c) Tests:
+      Verify that users can view shapes online.
+      Verify that users can view only approved shapes.
+      Verify that users can view shapes by area.
+      Verify that users can only view approved shapes when sorting by area.
+  d) Assignee:
+       ??
+  e) Estimation: ??
+  f) Priority: ??
+  g) Done:
+      All shapes are displayed correctly.
+      All shapes can be sorted by area and viewed only if approved by an administrator.
+      Only approved shapes can be viewed regardless of what the shapes are being sorted by.

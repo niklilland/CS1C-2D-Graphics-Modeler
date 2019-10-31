@@ -13,9 +13,10 @@
        Verify that messages are sent to the correct users/adminstrators
        Verify that users/adminstrators can reply to messages sent to them.
   d) Assignee:
-       ???
-  e) Estimation: ??
-  f) Priority: ??
+       Me and Basel will work on the front end of the project/GUI, how the inbox will look like.
+       Everyone else will work on the back end of the project, class data, etc.
+  e) Estimation: 20
+  f) Priority: 10
   g) Done:
        User can contact/message adminstrators about any issues or questions.
        Adminstrators can see these user sent messages and reply to them.

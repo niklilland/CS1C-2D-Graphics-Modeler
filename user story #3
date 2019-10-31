@@ -5,29 +5,30 @@
   a) Description:
   
       The user will be able to see the shape
-      and the id of the shape on the canvas
+      and the id of the shape on the canvas.
       
   b) Tasks:
   
-      general information about the shape 
-      should be projected on the cavas for 
+      General information about the shape 
+      should be projected on the canvas for 
       the user to see.
       
   c) Tests:
   
-      verify that the information us being 
+      Verify that the information us being 
       projected correctly on the canvas, and 
       that the information are accurate.
 
   d) Assignee:
 
-       ???
+       Basel and Nick will be work on the front end interface of where the user can see these shapes from.
+       Everyone else will work on the back end code with the help of class data and structure.
 
-  e) Estimation: ??
+  e) Estimation: 15
 
-  f) Priority: ??
+  f) Priority: 4
 
   g) Done:
       As a user, I should be able to know all
-      of the gernaeral information about the 
+      of the general information about the 
       shapes seamlessly.

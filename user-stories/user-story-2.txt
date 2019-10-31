@@ -1,5 +1,4 @@
 ---- USER STORY #2----
-
 #2 As a user, I can save and upload shapes
   a) Description:
        A user can save their own shapes and upload them for all users to see publicly.
@@ -26,3 +25,25 @@
        A user is notified if their shape has been approved or rejected.
        Only approved shapes are available for others to view.
 
+
+
+#6 As an administrator, I can add and remove shapes.
+  a) Description:
+      As an administrator, I should be able to add shapes
+      As an administrator, I should be able to remove shapes
+  b) Tasks:
+      Administrators should have access to all the shapes
+      Administrators should be able to add new shapes
+      Administrators should be able to delete shapes
+  c) Tests:
+      verify that the administrators have access to the shapes.
+      verify that the user does not have access to the shapes.
+      verify that any change is saved.
+      verify that any change is displayed.
+  d) Assignee:
+       ???
+  e) Estimation: ??
+  f) Priority: ??
+  g) Done:
+      Administrators are the only ones that can access the shapes
+      and any change is saved and displayed.

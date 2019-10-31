@@ -1,5 +1,5 @@
+---- USER STORY #10----
 #10 As a user, I can view a shape report of all shapes with a perimeter sorted by perimeter.
-
   a) Description:
        A user can view shapes with sorting by the shapes' perimeter.
        A user cannot view unshared or rejected shapes when sorting by their perimeter.
@@ -10,8 +10,7 @@
       Verify that users can view only approved shapes.
       Verify that users can view shapes by their perimeter.
       Verify that users can only view approved shapes when sorting by perimeter.
-  d) Assignee:
-       ??
+  d) Assignee: ??
   e) Estimation: ??
   f) Priority: ??
   g) Done:

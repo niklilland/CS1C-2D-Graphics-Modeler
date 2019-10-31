@@ -1,36 +1,19 @@
 ---- USER STORY #4----
-
 #4 As a user, I can view testimonials.
-
   a) Description:
-      
       users should be able to see other
       user's reviews. 
-     
   b) Tasks:
-    
       As a user I expect my review to be saved
       and for other users to be able to read them.
-      
   c) Tests:
-    
     verify that the reviews are being saved.
     verify that the reviews are being displayed
     verify that the user is able to right the
     reviews.
-
-  d) Assignee:
-       ??
-
+  d) Assignee: ??
   e) Estimation: ??
-
-
-
   f) Priority: ??
-
-
-
   g) Done:
-  
-      all reviews are displayed and saved correclty
+      all reviews are displayed and saved correctly
       all users have the ablilty to write reviews.

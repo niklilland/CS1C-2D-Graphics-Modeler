@@ -1,33 +1,23 @@
 ---- USER STORY #8----
-
 #8 As a user, I can view other users' saved shapes if they choose to share (upload) them.
-
   a) Description:
-
       A user can see both their own shapes and others shapes, but only if others share them.
-
       Users cannot view shapes that are not shared and approved by an administrator.
-
-      
-
   b) Tasks:
-  
        As a user, I can view other users' saved shapes that are shared.
-
        As an administrator, I can approve which shapes a user can view by approving or rejecting pending shapes that are requesting to be shared.
-
-
   c) Tests:
        Verify that a user can view their own shapes online.
        Verify that a user can view other users' approved shapes.
        Verify that users cannot view unshared shapes.
        Verify that administrators can approve and reject pending shapes.
        Verify that users cannot view rejected shapes.
-  d) Assignee:
-       ???
+  d) Assignee: ???
   e) Estimation: ??
   f) Priority: ??
   g) Done:
        A user is able to view their own shapes.
        Administrators are able to approve and reject pending shapes.
        A user cannot view unshared or rejected shapes.
+
+CHANGE THIS TO: "As a user, I can attempt log into the administrative console."

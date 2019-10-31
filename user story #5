@@ -1,128 +1,30 @@
 ---- USER STORY #5----
 
-
-
-
-
-
-
-#5 As an adminstrator, I can have access to all users saved shapes
-
-
-
-
-
-
-
+#5 As a user, I can add a testimonial.
 
   a) Description:
-
-
-
-
-
-
-
-      ...
-
-
-
-      ...
-
-
-
-      ...
-
-
+  
+      As a user, i should be able to add rivews
 
   b) Tasks:
 
-
-
-
-
-
-
-       ...
-
-
-
-
-
-
-
-       ...
-
-
-
-
-
-
+      The user should be able to add rivews and
+      the program should save them 
 
   c) Tests:
 
-
-
-
-
-
-
-       ...
-
-
-
-       ...
-
-
-
-       ...
-
-
-
-
-
-
+      verify that every user is able to write the rivews
+      verify that the rivews are being saved corecctly
 
   d) Assignee:
-
-
-
-
-
-
-
+  
        ???
-
-
-
-
-
-
-
+       
   e) Estimation: ??
-
-
-
-
-
-
 
   f) Priority: ??
 
-
-
-
-
-
-
   g) Done:
 
-       ...
-
-
-
-       ...
-
-
-
-       ...
+      All users should be able to write testimonials.
+      All users expect their testimonial to be saved.

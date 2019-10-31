@@ -1,47 +1,22 @@
 ---- USER STORY #1----
-#1 As a user, I am able to contact/message an adminstrator.
+#1 As a user, I can view shapes
   a) Description:
-       A user can message/contact an adminstrator for any techinical help, issues, etc.
-       A adminstrator will be able to see these message in their inbox and respond to the user
-       The user will receive the admins response in their inbox the next time they log in.
+    - The user can see all existing shapes the administrator has configured in the rendering area
+      upon opening the program.
+    - All graphic objects (including text) have their id displayed above them.
+    - The rendering area is 1000px horizontally by 500px vertically, and the coordinate system
+      begins in the top left at (0, 0) extending to the bottom right corner at (1000, 500).
   b) Tasks:
-       As a user, I can message and receive messages from adminstrators.
-       As a adminstrator, I can respond to user messages.
+    - Set up QT graphic interface in main function.
+    - Add draw space to graphic interface with size 1000 by 500 pixels.
+    - Load shapes from file in draw space.
   c) Tests:
-       Verify that a user can contact adminstrators.
-       Verify that a adminstrator can receive user messages.
-       Verify that messages are sent to the correct users/adminstrators
-       Verify that users/adminstrators can reply to messages sent to them.
-  d) Assignee:
-       Me and Basel will work on the front end of the project/GUI, how the inbox will look like.
-       Everyone else will work on the back end of the project, class data, etc.
-  e) Estimation: 20
-  f) Priority: 10
-  g) Done:
-       User can contact/message adminstrators about any issues or questions.
-       Adminstrators can see these user sent messages and reply to them.
-       Users can receive replies in their inbox and respond to these replies.
-       All tasks and tests are passed.
-
-
-
-#3 As a user, I can view shapes
-  a) Description:
-      The user will be able to see the shape
-      and the id of the shape on the canvas
-  b) Tasks:
-      general information about the shape 
-      should be projected on the cavas for 
-      the user to see.
-  c) Tests:
-      verify that the information us being 
-      projected correctly on the canvas, and 
-      that the information are accurate.
-  d) Assignee:
-       ???
+    - Verify the draw space is 1000px wide by 500px tall.
+    - Verify the draw space renders shapes from file.
+  d) Assignee: ??
   e) Estimation: ??
-  f) Priority: ??
+  f) Priority: 2
   g) Done:
-      As a user, I should be able to know all
-      of the gernaeral information about the 
-      shapes seamlessly.
+    - User is able to view the rendering space of appropriate size.
+    - User is able to see all shape objects within the text file rendered in draw space
+      according to their properties with their id's above them.

@@ -16,9 +16,11 @@
        Verify that users are notified if there shape has been reject or approved.
        Verify that only approved shapes are shown to oter users.
   d) Assignee:
-       ???
-  e) Estimation: ??
-  f) Priority: ??
+       Me and Basel will work on the front end and set up the structure for what the users will be able to do.
+       Bryson and Nick will work on the adminstrator permissions and the structure for how the approving system is.
+       Everyone else will work on the back end logic, operations, back end code, etc.
+  e) Estimation: 30
+  f) Priority: 5
   g) Done:
        A user is able to upload their own created shapes for others to view as well as view other
        users created shapes.

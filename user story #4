@@ -5,19 +5,19 @@
   a) Description:
       
       users should be able to see other
-      user's rivews. 
+      user's reviews. 
      
   b) Tasks:
     
-      AS a user I expect my rivew to be saved
+      As a user I expect my review to be saved
       and for other users to be able to read them.
       
   c) Tests:
     
-    verify that the rivews are being saved.
-    verify that the rivews are being displayed
+    verify that the reviews are being saved.
+    verify that the reviews are being displayed
     verify that the user is able to right the
-    rivews.
+    reviews.
 
   d) Assignee:
        ??
@@ -32,5 +32,5 @@
 
   g) Done:
   
-      all rivews are displayed and saved correclty
+      all reviews are displayed and saved correclty
       all users have the ablilty to write rivews.

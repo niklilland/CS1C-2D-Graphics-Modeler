@@ -1,52 +1,26 @@
 ---- USER STORY #4----
 
-
-
-#4 As a user, I can change a shapes dimensions.
-
-
+#4 As a user, I can view testimonials.
 
   a) Description:
-
-
-
-      ...
-
-      ...
-
-      ...
-
+      
+      users should be able to see other
+      user's rivews. 
+     
   b) Tasks:
-
-
-
-       ...
-
-
-
-       ...
-
-
-
+    
+      AS a user I expect my rivew to be saved
+      and for other users to be able to read them.
+      
   c) Tests:
-
-
-
-       ...
-
-       ...
-
-       ...
-
-
+    
+    verify that the rivews are being saved.
+    verify that the rivews are being displayed
+    verify that the user is able to right the
+    rivews.
 
   d) Assignee:
-
-
-
-       ???
-
-
+       ??
 
   e) Estimation: ??
 
@@ -57,8 +31,6 @@
 
 
   g) Done:
-       ...
-
-       ...
-
-       ...
+  
+      all rivews are displayed and saved correclty
+      all users have the ablilty to write rivews.

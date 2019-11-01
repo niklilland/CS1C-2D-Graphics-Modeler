@@ -1,23 +1,30 @@
 ---- USER STORY #8----
 #8 As a user, I can view a shape report of all shapes sorted by id.
   a) Description:
-      Every shape the administrator adds has an ID regardless of the area; therefore sorting by ID
-      should display every shape.
-      The user can view and find shapes if sorting by id.
+    - User can click on a separate tab to open the shape report area.
+    - The user can click on the "Sort by ID" button to generate a shape listing report
+      of all shapes.
+    - The shape listing report displays all shapes currently in the draw area, sorted
+      by id.
   b) Tasks:
-     Use same code used to view shape and make a sorting mechanism.
-     Add box to choose whether to sort by ID or not.
+    - Add a shape report tab.
+    - Add a "Sort by ID" button that does nothing if there are no shapes currently in
+      the draw area.
+    - Output shapes from shape file, sorted in ascending order by ID, in shape listing
+      report area when the "Sort by ID" button is clicked.
   c) Tests:
-     Verify that shapes sorted by ID are are displayed.
-     Verify that the draw space still renders shapes from file
-     Verify that users can still view shapes without sorting by ID
-     Verify that users can view shapes with sorting by ID
+    - Verify the shape listing area is a separate area (tab) from rest of the program.
+    - Verify the "Sort by ID" button does nothing if there are no shapes currently in
+      the draw area.
+    - Verify the shape listing report lists all current shapes, sorted in ascending
+      order by ID.
   d) Assignee: ???
   e) Estimation: 20
   f) Priority: ??
   g) Done:
-     User is able to view the rendering space of appropriate size.
-     User is able to see all shape objects within the text file rendered in draw space
-     sorted by ID
-     User is able to sort shapes by ID using a box.
-     User is able to not sort shapes.
+    - User can navigate to the shape listing report area of the program (separate tab).
+    - The "Sort by ID" button does nothing if there are no shapes currently in the
+      draw area.
+    - The "sort by ID" button generates a shape listing report of all shapes currently
+      in the draw area, sorted by ID in ascending order.
+

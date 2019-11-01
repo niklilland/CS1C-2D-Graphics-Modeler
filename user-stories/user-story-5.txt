@@ -23,7 +23,10 @@
     - Verify the user's testimonial is displayed in the testimonial area upon submission.
     - Verify the input field is cleared upon testimonial submission.
     - Verify the user can only input one testimonial per session.
-  d) Assignee: ??
+  d) Assignee:
+    - Nick: work on the algorithm needed to save the testimonial and outout it everytime the program runs.
+    - Ali: work on the algorithm needed to save the testimonial and outout it everytime the program runs.
+    - Bryson : implementation of the algorithm.
   e) Estimation: 20
   f) Priority: 7
   g) Done:

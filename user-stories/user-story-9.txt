@@ -1,24 +1,25 @@
 ---- USER STORY #9----
 #9 As a user, I can view a shape report of all shapes sorted by area
   a) Description:
-       The user can view all existing shapes the administrator has configures in the rendering area upon opening the program.
-       The rendering area is 100px horizontally and 500px vertically, and the coordinate system begins in the top left at (0, 0) extending        to the bottom right corner at (100, 500).
-       The user can view and find shapes if sorting by area.
-       All shapes sorted by area and not sorted by area have their id displayed above them.
+    - The user can view all existing shapes the administrator has configures in the rendering area upon opening the program.
+    - The rendering area is 100px horizontally and 500px vertically, and the coordinate system begins in the top left at (0, 0) extending
+      to the bottom right corner at (100, 500).
+    - The user can view and find shapes if sorting by area.
+    - All shapes sorted by area and not sorted by area have their id displayed above them.
   b) Tasks:
-       Use same code used to view shape and make a sorting mechanism.
-       Add box to choose whether to sort by area or not.
+      - Use same code used to view shape and make a sorting mechanism.
+      - Add box to choose whether to sort by area or not.
   c) Tests:
-      Verify that shapes sorted by area are still 1000px wide and 500px tall.
-      Verify that the draw space still renders shapes from file
-      Verify that users can still view shapes without sorting by area
-      Verify that users can view shapes with sorting by area
+    - Verify that shapes sorted by area are still 1000px wide and 500px tall.
+    - Verify that the draw space still renders shapes from file
+    - Verify that users can still view shapes without sorting by area
+    - Verify that users can view shapes with sorting by area
   d) Assignee: ??
-  e) Estimation: ??
+  e) Estimation: 20
   f) Priority: 3
   g) Done:
-      User is able to view the rendering space of appropriate size.
-      User is able to see all shape objects within the text file rendered in draw space
+    - User is able to view the rendering space of appropriate size.
+    - User is able to see all shape objects within the text file rendered in draw space
       according to their properties with their id's above them.
-      User is able to sort shapes by area.
-      User is able to not sort shapes.
+    - User is able to sort shapes by area.
+    - User is able to not sort shapes.

@@ -24,7 +24,7 @@
     - Verify the input field is cleared upon testimonial submission.
     - Verify the user can only input one testimonial per session.
   d) Assignee: ??
-  e) Estimation: ??
+  e) Estimation: 20
   f) Priority: ??
   g) Done:
     - Users can input only one testimonial per session.

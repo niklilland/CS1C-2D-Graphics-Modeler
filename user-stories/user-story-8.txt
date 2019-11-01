@@ -1,29 +1,21 @@
 ---- USER STORY #8----
 #8 As a user, I can view a shape report of all shapes sorted by id.
-
   a) Description:
-  
       Every shape the administrator adds has an ID regardless of the area; therefore sorting by ID
       should display every shape.
       The user can view and find shapes if sorting by id.
-      
   b) Tasks:
-  
      Use same code used to view shape and make a sorting mechanism.
      Add box to choose whether to sort by ID or not.
-      
   c) Tests:
-  
      Verify that shapes sorted by ID are are displayed.
      Verify that the draw space still renders shapes from file
      Verify that users can still view shapes without sorting by ID
      Verify that users can view shapes with sorting by ID
-
   d) Assignee: ???
-  e) Estimation: ??
+  e) Estimation: 20
   f) Priority: ??
   g) Done:
-  
      User is able to view the rendering space of appropriate size.
      User is able to see all shape objects within the text file rendered in draw space
      sorted by ID

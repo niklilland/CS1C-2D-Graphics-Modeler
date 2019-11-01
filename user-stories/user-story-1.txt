@@ -14,7 +14,7 @@
     - Verify the draw space is 1000px wide by 500px tall.
     - Verify the draw space renders shapes from file.
   d) Assignee: ??
-  e) Estimation: ??
+  e) Estimation: 30
   f) Priority: 2
   g) Done:
     - User is able to view the rendering space of appropriate size.

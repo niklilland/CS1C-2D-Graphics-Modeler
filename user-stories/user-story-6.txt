@@ -1,28 +1,20 @@
 ---- USER STORY #6----
 #6 As a user, I can view the company’s contact information.
-
   a) Description:
-  
-      - As a user I will be able to see company's name.
-      - As a user I will be able to see company's logo.
-      - As a user I will be able to see company's phone number.
-      - As a user I will be abel to see company's e-mail.
-      
+    - As a user I will be able to see company's name.
+    - As a user I will be able to see company's logo.
+    - As a user I will be able to see company's phone number.
+    - As a user I will be abel to see company's e-mail.
   b) Tasks:
-  
-      - Company's logo and contact information would be presented for the user to see.
-      - The information are dummy information just act as place holders.
-      - The user will not be able to do anything with the information provided, they are purely text.
-      
+    - Company's logo and contact information would be presented for the user to see.
+    - The information are dummy information just act as place holders.
+    - The user will not be able to do anything with the information provided, they are purely text.
   c) Tests:
-  
-      - Verify that Company's contact information is being projected for the user to see.
-      - Verify that the placement of the text is acceptable.
-      
+    - Verify that Company's contact information is being projected for the user to see.
+    - Verify that the placement of the text is acceptable.
   d) Assignee: ???
-  e) Estimation: ??
+  e) Estimation: 10
   f) Priority: ??
   g) Done:
-    
-      - User will be able to see company's logo and information.
+    - User will be able to see company's logo and information.
 

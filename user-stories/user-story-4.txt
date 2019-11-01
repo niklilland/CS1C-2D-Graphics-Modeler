@@ -10,7 +10,7 @@
     - Verify the existing testimonials are loaded from the testimonial file and displayed
       to the user inside the testimonial area.
   d) Assignee: ??
-  e) Estimation: 2
+  e) Estimation: 10
   f) Priority: ??
   g) Done:
     - Users can view existing testimonials in a separate area from the draw space.

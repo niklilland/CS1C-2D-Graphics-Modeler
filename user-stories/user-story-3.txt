@@ -19,7 +19,7 @@
     - Verify the "Modify Shape" form, upon submission, re-loads the draw space and displays the modified
       shape with its new properties, in addition to the existing shapes.
   d) Assignee: ??
-  e) Estimation: ??
+  e) Estimation: 20
   f) Priority: ??
   g) Done:
     - Administrator is able to click on the "Modify Shape" button when there is at least one shape already

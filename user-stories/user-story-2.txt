@@ -31,7 +31,7 @@
     - Verify the "Remove Shape" form, upon submission, removes the specified shape from the draw space while leaving
       all other existing shapes.
   d) Assignee: ???
-  e) Estimation: ??
+  e) Estimation: 40
   f) Priority: ??
   g) Done:
     - Administrator is able to click on "Add Shape" button, is presented with the "Add Shape" form with all relevant

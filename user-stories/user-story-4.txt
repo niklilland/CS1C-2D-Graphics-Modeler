@@ -10,7 +10,7 @@
     - Verify the existing testimonials are loaded from the testimonial file and displayed
       to the user inside the testimonial area.
   d) Assignee: ??
-  e) Estimation: ??
+  e) Estimation: 2
   f) Priority: ??
   g) Done:
     - Users can view existing testimonials in a separate area from the draw space.
@@ -20,3 +20,5 @@
     - Users can immediately see their submitted testimonial displayed in the testimonial
       area with other users' testimonials upon submission.
     - Testimonials appear unchanged between sessions of the program.
+
+Baseline story point estimate value of one = 2 hrs of development time for a single developer

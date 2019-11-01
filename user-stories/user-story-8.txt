@@ -1,23 +1,31 @@
 ---- USER STORY #8----
 #8 As a user, I can view a shape report of all shapes sorted by id.
+
   a) Description:
-      A user can see both their own shapes and others shapes, but only if others share them.
-      Users cannot view shapes that are not shared and approved by an administrator.
+  
+      Every shape the administrator adds has an ID regardless of the area; therefore sorting by ID
+      should display every shape.
+      The user can view and find shapes if sorting by id.
+      
   b) Tasks:
-       As a user, I can view other users' saved shapes that are shared.
-       As an administrator, I can approve which shapes a user can view by approving or rejecting pending shapes that are requesting to be shared.
+  
+     Use same code used to view shape and make a sorting mechanism.
+     Add box to choose whether to sort by ID or not.
+      
   c) Tests:
-       Verify that a user can view their own shapes online.
-       Verify that a user can view other users' approved shapes.
-       Verify that users cannot view unshared shapes.
-       Verify that administrators can approve and reject pending shapes.
-       Verify that users cannot view rejected shapes.
+  
+     Verify that shapes sorted by ID are are displayed.
+     Verify that the draw space still renders shapes from file
+     Verify that users can still view shapes without sorting by ID
+     Verify that users can view shapes with sorting by ID
+
   d) Assignee: ???
   e) Estimation: ??
   f) Priority: ??
   g) Done:
-       A user is able to view their own shapes.
-       Administrators are able to approve and reject pending shapes.
-       A user cannot view unshared or rejected shapes.
-
-CHANGE THIS TO: "As a user, I can attempt log into the administrative console."
+  
+     User is able to view the rendering space of appropriate size.
+     User is able to see all shape objects within the text file rendered in draw space
+     sorted by ID
+     User is able to sort shapes by ID using a box.
+     User is able to not sort shapes.

@@ -12,7 +12,8 @@
   c) Tests:
     - Verify that Company's contact information is being projected for the user to see.
     - Verify that the placement of the text is acceptable.
-  d) Assignee: ???
+  d) Assignee:
+    - Basel: develop a simple function that outputs company's information.
   e) Estimation: 10
   f) Priority: 10
   g) Done:

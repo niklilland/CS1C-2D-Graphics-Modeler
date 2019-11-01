@@ -1,19 +1,25 @@
 ---- USER STORY #5----
-#5 As a user, I can add a testimonial.
+#5 As a user, I can view testimonials.
   a) Description:
-      As a user, i should be able to add rivews
+      The user will be able to see other users testimonial as well as their own rivews.
+      testimonial will exsist after closing and reopening the program.
+      
   b) Tasks:
-      The user should be able to add rivews and
-      the program should save them 
+      Make a testimonials class
+      write the testimonials to a file before closing the program
+      load the testimonials from the file into the canvas for the user to see
+      
   c) Tests:
+  
       verify that every user is able to write the rivews
-      verify that the rivews are being saved corecctly
+      verify that the testimonials are being saved correctly
+      verify that the testimonials are being loaded correctly
+      
   d) Assignee: ???
   e) Estimation: ??
   f) Priority: ??
   g) Done:
       All users should be able to write testimonials.
-      All users expect their testimonial to be saved.
-
-
+      All users expect their testimonial to be saved before closing the program.
+      All users expect their testimonial to be loaded with the program
 

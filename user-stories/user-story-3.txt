@@ -20,22 +20,3 @@
       As a user, I should be able to know all
       of the general information about the 
       shapes seamlessly.
-
-
-
-#7 As an administrator, I can move shapes.
-  a) Description:
-      Administrators have access to shapes and
-      can move them on the canvas.
-  b) Tasks:
-      As an administrator, I can move shapes around by providing 
-      and X and a Y values.
-  c) Tests:
-      verify that administrators are the only ones that can move shapes
-      verify that the shapes are moving on the canvas and that their location is updating
-      verify that the updates are being saved.
-  d) Assignee: ???
-  e) Estimation: ??
-  f) Priority: ??
-  g) Done:
-     administrators alone have access to shapes and can move them around on the canvas.

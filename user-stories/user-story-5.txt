@@ -1,8 +1,10 @@
 ---- USER STORY #5----
-#5 As a user, I can view testimonials.
+#5 As a user, I can add a testimonial.
+
   a) Description:
-      The user will be able to see other users testimonial as well as their own rivews.
-      testimonial will exsist after closing and reopening the program.
+  
+      users will be able to add testimonial and should be able to see other user's testimonial.
+      testimonial are saved before the program closes and loaded back up after the program starts.
       
   b) Tasks:
       Make a testimonials class

@@ -18,7 +18,11 @@
       shape's new properties.
     - Verify the "Modify Shape" form, upon submission, re-loads the draw space and displays the modified
       shape with its new properties, in addition to the existing shapes.
-  d) Assignee: ??
+  d) Assignee:
+    - Nik: Add "Modify Shape" button to draw area screen.
+    - Bryson: Ensure "Modify Shape" button is disabled for regular users.
+    - Ali: Update shape file with specified changes.
+    - Basel: Update the draw space with the specified changes.
   e) Estimation: 20
   f) Priority: 6
   g) Done:

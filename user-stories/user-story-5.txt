@@ -23,7 +23,13 @@
     - Verify the user's testimonial is displayed in the testimonial area upon submission.
     - Verify the input field is cleared upon testimonial submission.
     - Verify the user can only input one testimonial per session.
-  d) Assignee: ??
+  d) Assignee:
+    - Nik: Add testimonial input area and input button.
+    - Leon: Add character limit and requirement for minimum one character before submit
+      button works.
+    - Bryson: Write user testimonial to program testimonial file.
+    - Basel: Re-load the testimonial area with the new user testimonial appended to list.
+    - Ali: Ensure user can only submit one testimonial per session.
   e) Estimation: 20
   f) Priority: 7
   g) Done:

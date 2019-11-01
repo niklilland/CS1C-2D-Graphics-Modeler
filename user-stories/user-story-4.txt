@@ -9,7 +9,10 @@
   c) Tests:
     - Verify the existing testimonials are loaded from the testimonial file and displayed
       to the user inside the testimonial area.
-  d) Assignee: ??
+  d) Assignee:
+    - Nik: Add testimonial screen.
+    - Max: Display testimonials in testimonal list space.
+    - Ali: Read testimonials from program's testimonal file.
   e) Estimation: 10
   f) Priority: 4
   g) Done:

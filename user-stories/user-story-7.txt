@@ -1,20 +1,26 @@
 ---- USER STORY #7----
-#7 As an administrator, I can move shapes.
+#7 As a user, I can attempt to log into the administrative console.
   a) Description:
-      Administrators have access to shapes and
-      can move them on the canvas.
+       - Any user can attempt to log into the adminstrative console.
+       - Only users that are admins can succesfully access the admin console.
   b) Tasks:
-      As an administrator, I can move shapes around by providing 
-      and X and a Y values.
+      - Make admin console interface in QT
+      - Make admin console only accessable to adminstrators.
+      - Users that attempt to access the admin console will not be able to have access
+        to any of the tools in the admin console.
   c) Tests:
-      verify that administrators are the only ones that can move shapes
-      verify that the shapes are moving on the canvas and that their location is updating
-      verify that the updates are being saved.
-  d) Assignee: ???
-  e) Estimation: ??
+      - Verify that only admins have access to the console.
+      - Verify that admins can access the admin console.
+      - Verify that admin console works for admins only.
+  d) Assignee: 
+      - Ali and Basel will work on the admin console itself (including interface)
+      - Nik will work on the permissions for the adminstrator console
+      - Others will help in if need be
+  e) Estimation: 10
   f) Priority: ??
   g) Done:
-     administrators alone have access to shapes and can move them around on the canvas.
+     - Users can attempt to log onto the admin console
+     - Only admins can acccess admin console
+     - Admin console is accessible and viewable for admins, and everything
+       in the console works.
 
-
-CHANGE THIS TO: "As a user, I can view reports sorted by area, perimeter, and id."

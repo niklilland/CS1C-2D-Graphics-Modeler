@@ -1,23 +1,36 @@
 ---- USER STORY #5----
 #5 As a user, I can add a testimonial.
-
   a) Description:
-  
-      users will be able to add testimonial and should be able to see other user's testimonial.
-      testimonial are saved before the program closes and loaded back up after the program starts.
-      
+    - Users can write their own testimonials, up to a maximum character limit, and submit
+      them to be displayed in the program immediately.
+    - Users can see their own testimonial persist through multiple sessions of the
+      programm running.
   b) Tasks:
-      Make a testimonials class
-      write the testimonials to a file before closing the program
-      load the testimonials from the file into the canvas for the user to see
+    - Add an input area in the testimonial area where users can input their own text up to
+      a character limit.
+    - Add a submission button that is disabled until the user has entered at least one
+      character in the testimonial input area.
+    - Upon clicking the submission button, the user's testimonial should be written to the
+      program's testimonial file, and the testimonial area should display the user's
+      testimonial.
+    - Users should only be able to add one testimonial per session.
   c) Tests:
-      verify that every user is able to write the rivews
-      verify that the testimonials are being saved correctly
-      verify that the testimonials are being loaded correctly
-  d) Assignee: ???
+    - Verify the user cannot submit a new testimonial unless they have input at least one
+      character in the testimonial input field.
+    - Verify the user's testimonial cannot exceed a to-be-determined character limit
+      (if feasible).
+    - Verify the user's testimonial is written to the testimonial file upon submission.
+    - Verify the user's testimonial is displayed in the testimonial area upon submission.
+    - Verify the input field is cleared upon testimonial submission.
+    - Verify the user can only input one testimonial per session.
+  d) Assignee: ??
   e) Estimation: ??
   f) Priority: ??
   g) Done:
-      All users should be able to write testimonials.
-      All users expect their testimonial to be saved before closing the program.
-      All users expect their testimonial to be loaded with the program
+    - Users can input only one testimonial per session.
+    - Users can not submit a blank testimonial, the testimonial submission button does
+      nothing until at least one character has been input in the testimonial field.
+    - Users can immediately see their submitted testimonial displayed in the testimonial
+      area with other users' testimonials upon submission.
+    - Testimonials appear unchanged between sessions of the program outside of the user
+      submitting new testimonials.

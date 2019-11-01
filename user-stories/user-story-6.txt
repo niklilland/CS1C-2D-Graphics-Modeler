@@ -1,24 +1,28 @@
 ---- USER STORY #6----
-#6 As an administrator, I can add and remove shapes.
+#6 As a user, I can view the company’s contact information.
+
   a) Description:
-      As an administrator, I should be able to add shapes
-      As an administrator, I should be able to remove shapes
+  
+      - As a user I will be able to see company's name.
+      - As a user I will be able to see company's logo.
+      - As a user I will be able to see company's phone number.
+      - As a user I will be abel to see company's e-mail.
+      
   b) Tasks:
-      Administrators should have access to all the shapes
-      Administrators should be able to add new shapes
-      Administrators should be able to delete shapes
+  
+      - Company's logo and contact information would be presented for the user to see.
+      - The information are dummy information just act as place holders.
+      - The user will not be able to do anything with the information provided, they are purely text.
+      
   c) Tests:
-      verify that the administrators have access to the shapes.
-      verify that the user does not have access to the shapes.
-      verify that any change is saved.
-      verify that any change is displayed.
+  
+      - Verify that Company's contact information is being projected for the user to see.
+      - Verify that the placement of the text is acceptable.
+      
   d) Assignee: ???
   e) Estimation: ??
   f) Priority: ??
   g) Done:
-      Administrators are the only ones that can access the shapes
-      and any change is saved and displayed.
-
-
-CHANGE THIS TO: "As a user, I can view the company’s contact information."
+    
+      - User will be able to see company's logo and information.
 

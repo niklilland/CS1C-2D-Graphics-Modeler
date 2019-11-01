@@ -1,29 +1,40 @@
 ---- USER STORY #9----
-#9 As a user, I can view a shape report of all shapes sorted by area
+#9 As a user, I can view a shape report of all shapes sorted by Area.
 
   a) Description:
-  
-       - The user will have the ability to sort shapes by area using a check box.
-       - The user can view and find shapes if sorting by area.
-       - All shapes sorted by area will appear is the shape report
-       
+
+    - User can click on a separate tab to open the shape report area.
+    - The user can click on the "Sort by area" button to generate a shape listing report
+      of all shapes.
+    - The shape listing report displays all shapes currently in the draw area, sorted
+      by area.
+
   b) Tasks:
-  
-       - Use same code used to view shape and make a sorting mechanism.
-       - Add box to choose whether to sort by area or not.
-       
+
+    - Add a shape report tab.
+    - Add a "Sort by area" button that does nothing if there are no shapes currently in
+      the draw area.
+    - Output shapes from shape file, sorted in ascending order by area, in shape listing
+      report area when the "Sort by area" button is clicked.
+
   c) Tests:
-  
-      - Verify that all of the shapes in the canvas are appearing in the report sortted.
-      - Verify that users can still view shapes without sorting by area
-      - Verify that users can view shapes with sorting by area
-      - verify that users can switch between different sort types.
-      
-  d) Assignee: ??
+
+    - Verify the shape listing area is a separate area (tab) from rest of the program.
+    - Verify the "Sort by area" button does nothing if there are no shapes currently in
+      the draw area.
+    - Verify the shape listing report lists all current shapes, sorted in ascending
+      order by area.
+
+  d) Assignee: ???
+
   e) Estimation: 20
-  f) Priority: 3
+
+  f) Priority: ??
+
   g) Done:
-  
-      - User is able to see a list of all shapes sorted by area in the shape report.
-      - User is able to sort shapes by area.
-      - User is able to not sort shapes.
+
+    - User can navigate to the shape listing report area of the program (separate tab).
+    - The "Sort by area" button does nothing if there are no shapes currently in the
+      draw area.
+    - The "sort by area" button generates a shape listing report of all shapes currently
+      in the draw area, sorted by area in ascending order.

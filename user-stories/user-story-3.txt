@@ -1,22 +1,32 @@
 ---- USER STORY #3----
-#3 As a user, I can view shapes
+#3 As an administrator, I can move and modify shapes.
   a) Description:
-      The user will be able to see the shape
-      and the id of the shape on the canvas.
+    - An administrator can click on the "Modify Shape" button and modify an existing shape in the draw space.
+    - A regular user cannot click on the "Modify Shape" button, it is disabled.
   b) Tasks:
-      General information about the shape 
-      should be projected on the canvas for 
-      the user to see.
+    - Add a "Modify Shape" button to the graphical layout.
+    - Ensure the "Modify Shape" button only responds to administrators who are logged in.
+    - Display a "Modify Shape" form when clicked that allows the administrator to select an existing shape and
+      modify it's properties.
+    - Upon submission of the "Modify Shape" form, the program's shape file's entry for the selected shape is
+      updated with the specified properties, and the draw space is re-loaded and displays the updated shape.
+    - If there are no shapes, the "Modify Shape" button is disabled for administrators.
   c) Tests:
-      Verify that the information us being 
-      projected correctly on the canvas, and 
-      that the information are accurate.
-  d) Assignee:
-       Basel and Nick will be work on the front end interface of where the user can see these shapes from.
-       Everyone else will work on the back end code with the help of class data and structure.
-  e) Estimation: 15
-  f) Priority: 4
+    - Verify the "Modify Shape" button only displays the "Modify Shape" form for administrators when there
+      is at least one shape in the draw space.
+    - Verify the "Modify Shape" form, upon submission, updates the program's shape file with the selected
+      shape's new properties.
+    - Verify the "Modify Shape" form, upon submission, re-loads the draw space and displays the modified
+      shape with its new properties, in addition to the existing shapes.
+  d) Assignee: ??
+  e) Estimation: ??
+  f) Priority: ??
   g) Done:
-      As a user, I should be able to know all
-      of the general information about the 
-      shapes seamlessly.
+    - Administrator is able to click on the "Modify Shape" button when there is at least one shape already
+      in the draw space.
+    - Administrator should be presented with the "Modify Shape" form when the "Modify Shape" button is
+      clicked, and given the option of selecting one of the existing shapes.
+    - Administrator should then be presented with the properties of the existing shape, and allowed to
+      change all of them.
+    - Upon submitting the "Modify Shape" form, the administrator should be able to see the specified
+      changes in the draw space.

@@ -1,28 +1,42 @@
 ---- USER STORY #2----
-#2 As a user, I can save and upload shapes
+#2 As an administrator, I can add and remove shapes.
   a) Description:
-       A user can save their own shapes and upload them for all users to see publicly.
-       A user can see other users shapes that have been uploaded
-       Adminstrators must approve or reject uploaded shaped before they are uploaded.
+    - An administrator can click on the "Add Shape" button and add a new shape to the draw space.
+    - An administrator can click on the "Remove Shape" button and remove an existing shape from the draw space.
+    - A regular user cannot click on the "Add Shape" or "Remove Shape" button, they are disabled.
   b) Tasks:
-       As a user, I can upload my own shapes and view other users shapes.
-       As a adminstrator, I can review shapes thare are pending for review and approve or reject them.
+    - Add a "Add Shape" button to the graphical layout.
+    - Add a "Remove Shape" button to the graphical layout.
+    - Ensure the "Add Shape" and "Remove Shape" buttons only respond to administrators who are logged in.
+    - Display an "Add Shape" form to the administrator when clicked that allows the administrator to specify the
+      properties of the new shape to be added to the draw space.
+    - Upon submission of the "Add Shape" form, the new shape is written to the program's shape file and the draw
+      space is re-loaded to display the new shape.
+    - Display a "Remove Shape" form to the administrator when clicked that allows the administrator to select an
+      existing shape and remove it from the draw space.
+    - Upon submission of the "Remove Shape" form, the selected shape is removed from the program's shape file and
+      the draw space is re-loaded to display the existing shapes without the deleted shape.
   c) Tests:
-       Verify that a user can upload shapes online.
-       Verify that a user can view other users shapes.
-       Verify that uploaded shapes are put in pending for adminstrators to approve or reject.
-       Verify that adminstrators can approve or reject user submitted shapes.
-       Verify that users are notified if there shape has been reject or approved.
-       Verify that only approved shapes are shown to oter users.
-  d) Assignee:
-       Me and Basel will work on the front end and set up the structure for what the users will be able to do.
-       Bryson and Nick will work on the adminstrator permissions and the structure for how the approving system is.
-       Everyone else will work on the back end logic, operations, back end code, etc.
-  e) Estimation: 30
-  f) Priority: 5
+    - Verify the "Add Shape" button only displays the "Add Shape" form for administrators.
+    - Verify the "Remove Shape" button only displays the "Remove Shape" form for administrators.
+    - Verify the "Add Shape" form correctly accepts all relevant shape properties as input from the administrator.
+    - Verify the "Add Shape" form correctly writes the specified new shape's properties to the program's shape file
+      upon submission.
+    - Verify the "Remove Shape" form correctly displays all existing shapes to the administrator as options to be
+      selected.
+    - Verify the "Remove Shape" form correctly removes the specified shapefrom the program's shape file upon
+      submission.
+    - Verify the "Add Shape" form, upon submission, displays the new shape in the draw space in addition to other
+      existing other shapes.
+    - Verify the "Remove Shape" form, upon submission, removes the specified shape from the draw space while leaving
+      all other existing shapes.
+  d) Assignee: ???
+  e) Estimation: ??
+  f) Priority: ??
   g) Done:
-       A user is able to upload their own created shapes for others to view as well as view other
-       users created shapes.
-       A adminstrator is able to approve or reject all pending for upload shapes before are posted.
-       A user is notified if their shape has been approved or rejected.
-       Only approved shapes are available for others to view.
+    - Administrator is able to click on "Add Shape" button, is presented with the "Add Shape" form with all relevant
+      options for a new shape, and successfully adds the new shape to the draw space.
+    - Regular users cannot click on the "Add Shape" button.
+    - Administrator is able to click on "Remove Shape" button, is presented with the "Remove Shape" form with all
+      existing shapes as options to be selected, and successfully removes the selected shape from the draw space.
+    - Regular users cannot click on the "Remove Shape" button.

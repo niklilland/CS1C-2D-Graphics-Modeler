@@ -10,13 +10,10 @@
       Make a testimonials class
       write the testimonials to a file before closing the program
       load the testimonials from the file into the canvas for the user to see
-      
   c) Tests:
-  
       verify that every user is able to write the rivews
       verify that the testimonials are being saved correctly
       verify that the testimonials are being loaded correctly
-      
   d) Assignee: ???
   e) Estimation: ??
   f) Priority: ??
@@ -24,4 +21,3 @@
       All users should be able to write testimonials.
       All users expect their testimonial to be saved before closing the program.
       All users expect their testimonial to be loaded with the program
-

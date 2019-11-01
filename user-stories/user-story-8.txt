@@ -25,6 +25,5 @@
     - User can navigate to the shape listing report area of the program (separate tab).
     - The "Sort by ID" button does nothing if there are no shapes currently in the
       draw area.
-    - The "sort by ID" button generates a shape listing report of all shapes currently
+    - The "Sort by ID" button generates a shape listing report of all shapes currently
       in the draw area, sorted by ID in ascending order.
-

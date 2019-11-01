@@ -1,19 +1,26 @@
 ---- USER STORY #10----
 #10 As a user, I can view a shape report of all shapes with a perimeter sorted by perimeter.
   a) Description:
-    - A user can view shapes with sorting by the shapes' perimeter.
-    - A user cannot view unshared or rejected shapes when sorting by their perimeter.
+    - User can click on a separate tab to open the shape report area.
+    - The user can click on the "Sort by Perimeter" button to generate a shape listing report
+      of all shapes with a perimeter.
+    - The shape listing report displays all shapes currently in the draw area with a perimeter,
+      sorted by perimeter.
   b) Tasks:
-    - As a user, I can view all viewable shapes without sorting.
-    - As a user, I can view shape reports with sorting by perimeter, which sorts all of the shape reports by their perimeter.
+    - Add a "Sort by Perimeter" button in the shape report area that does nothing if there are
+      no shapes currently in the draw area with a perimeter.
+    - Output shapes from shape file, sorted in descending order by perimeter, in shape listing
+      report area when the "Sort by Perimeter" button is clicked.
   c) Tests:
-    - Verify that users can view only approved shapes.
-    - Verify that users can view shapes by their perimeter.
-    - Verify that users can only view approved shapes when sorting by perimeter.
+    - Verify the "Sort by Perimeter" button does nothing if there are no shapes currently in
+      the draw area with a perimeter.
+    - Verify the shape listing report lists all current shapes, sorted in descending
+      order by perimeter.
   d) Assignee: ??
   e) Estimation: 20
   f) Priority: ??
   g) Done:
-    - All approved shapes are displayed correctly.
-    - All shapes can be sorted by perimeter and viewed only if approved by an administrator.
-    - Only approved shapes can be viewed regardless of what the shapes are being sorted by.
+    - The "Sort by Perimeter" button does nothing if there are no shapes currently in the
+      draw area with a perimeter.
+    - The "Sort by Perimeter" button generates a shape listing report of all shapes currently
+      in the draw area, sorted by perimeter in descending order.

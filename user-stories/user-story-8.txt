@@ -1,5 +1,5 @@
 ---- USER STORY #8----
-#8 As a user, I can view other users' saved shapes if they choose to share (upload) them.
+#8 As a user, I can view a shape report of all shapes sorted by id.
   a) Description:
       A user can see both their own shapes and others shapes, but only if others share them.
       Users cannot view shapes that are not shared and approved by an administrator.

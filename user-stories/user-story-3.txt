@@ -20,7 +20,7 @@
       shape with its new properties, in addition to the existing shapes.
   d) Assignee: ??
   e) Estimation: 20
-  f) Priority: ??
+  f) Priority: 6
   g) Done:
     - Administrator is able to click on the "Modify Shape" button when there is at least one shape already
       in the draw space.

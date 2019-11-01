@@ -11,7 +11,7 @@
       to the user inside the testimonial area.
   d) Assignee: ??
   e) Estimation: 10
-  f) Priority: ??
+  f) Priority: 4
   g) Done:
     - Users can view existing testimonials in a separate area from the draw space.
     - Users can input only one testimonial per session.

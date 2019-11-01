@@ -32,7 +32,7 @@
       all other existing shapes.
   d) Assignee: ???
   e) Estimation: 40
-  f) Priority: ??
+  f) Priority: 3
   g) Done:
     - Administrator is able to click on "Add Shape" button, is presented with the "Add Shape" form with all relevant
       options for a new shape, and successfully adds the new shape to the draw space.

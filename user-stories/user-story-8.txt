@@ -20,7 +20,7 @@
       order by ID.
   d) Assignee: ???
   e) Estimation: 20
-  f) Priority: ??
+  f) Priority: 5
   g) Done:
     - User can navigate to the shape listing report area of the program (separate tab).
     - The "Sort by ID" button does nothing if there are no shapes currently in the

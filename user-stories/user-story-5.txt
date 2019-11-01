@@ -25,7 +25,7 @@
     - Verify the user can only input one testimonial per session.
   d) Assignee: ??
   e) Estimation: 20
-  f) Priority: ??
+  f) Priority: 7
   g) Done:
     - Users can input only one testimonial per session.
     - Users can not submit a blank testimonial, the testimonial submission button does

@@ -18,7 +18,7 @@
       order by perimeter.
   d) Assignee: ??
   e) Estimation: 20
-  f) Priority: ??
+  f) Priority: 9
   g) Done:
     - The "Sort by Perimeter" button does nothing if there are no shapes currently in the
       draw area with a perimeter.

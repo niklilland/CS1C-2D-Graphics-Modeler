@@ -15,7 +15,7 @@
     - Verify the draw space renders shapes from file.
   d) Assignee: ??
   e) Estimation: 30
-  f) Priority: 2
+  f) Priority: 1
   g) Done:
     - User is able to view the rendering space of appropriate size.
     - User is able to see all shape objects within the text file rendered in draw space

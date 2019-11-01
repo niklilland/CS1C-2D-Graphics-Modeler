@@ -17,7 +17,7 @@
       - Nik will work on the permissions for the adminstrator console
       - Others will help in if need be
   e) Estimation: 10
-  f) Priority: ??
+  f) Priority: 2
   g) Done:
      - Users can attempt to log onto the admin console
      - Only admins can acccess admin console

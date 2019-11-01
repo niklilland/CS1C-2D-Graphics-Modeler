@@ -14,7 +14,7 @@
     - Verify that the placement of the text is acceptable.
   d) Assignee: ???
   e) Estimation: 10
-  f) Priority: ??
+  f) Priority: 10
   g) Done:
     - User will be able to see company's logo and information.
 

@@ -21,7 +21,7 @@
       
   d) Assignee: ??
   e) Estimation: 20
-  f) Priority: 3
+  f) Priority: 8
   g) Done:
   
       - User is able to see a list of all shapes sorted by area in the shape report.

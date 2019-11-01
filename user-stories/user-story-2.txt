@@ -30,7 +30,12 @@
       existing other shapes.
     - Verify the "Remove Shape" form, upon submission, removes the specified shape from the draw space while leaving
       all other existing shapes.
-  d) Assignee: ???
+  d) Assignee:
+    - Nik: Create "Add Shape" button and accompanying form.
+    - Nik: Create "Remove Shape" button and accompanying form.
+    - Ali: Write updated shape info to file.
+    - Bryson & Max: Ensure the "Add Shape" and "Remove Shape" buttons are disabled for regular users.
+    - Basel: Update the draw area with the changes from each button.
   e) Estimation: 40
   f) Priority: 3
   g) Done:

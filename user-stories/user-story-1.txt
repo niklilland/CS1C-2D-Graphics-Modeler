@@ -13,7 +13,9 @@
   c) Tests:
     - Verify the draw space is 1000px wide by 500px tall.
     - Verify the draw space renders shapes from file.
-  d) Assignee: ??
+  d) Assignee:
+    - Nik: Create the program interface and draw area layout.
+    - Leon: Load shapes from file in draw space.
   e) Estimation: 30
   f) Priority: 1
   g) Done:

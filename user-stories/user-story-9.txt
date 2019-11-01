@@ -18,7 +18,9 @@
       the draw area.
     - Verify the shape listing report lists all current shapes, sorted in ascending
       order by area.
-  d) Assignee: ???
+  d) Assignee:
+     - Max: develop the algerithm needed to sort
+     - Leon: implementation of the algerthm.
   e) Estimation: 20
   f) Priority: 8
   g) Done:

@@ -9,6 +9,36 @@
 #define SHAPE_H_
 
 
+#include <iostream>
+#include <iomanip>
+#include <QPainter>
+
+using namespace std;
+
+enum class ShapeType{
+	Line, Polyline, Polygon, Rectangle, Ellipse, Text
+};
+
+
+
+class Shape
+{
+	public:
+		Shape();//constructor
+		virtual ~Shape();//destructor
+		//pure virtual funstions:
+		virtual void draw(const int translate_x,const int translate_y) = 0;
+		virtual void move(const int x,const int y) = 0;
+		virtual float perimeter() = 0;
+		virtual float area() = 0; 
+	private:
+		int shapeID;		
+		QPainter qpainter;
+		ShapeType shape;
+		QPen pen;
+		QBrush brush;
+};
+
 
 
 

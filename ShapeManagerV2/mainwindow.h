@@ -28,6 +28,8 @@ private slots:
     void generateLineReportClicked();
     void generateCumulativeReportClicked();
     void submitFeedbackClicked();
+    void loginClicked();
+    void logoutClicked();
 
 private:
     Ui::MainWindow *ui;

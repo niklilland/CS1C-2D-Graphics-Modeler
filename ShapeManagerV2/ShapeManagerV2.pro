@@ -21,8 +21,16 @@ SOURCES += \
     renderarea.cpp
 
 HEADERS += \
+    Ellipse.h \
+    Line.h \
+    Polygon.h \
+    Polyline.h \
+    Rectangle.h \
+    Shape.h \
+    Text.h \
     mainwindow.h \
-    renderarea.h
+    renderarea.h \
+    vector.h
 
 FORMS += \
     mainwindow.ui

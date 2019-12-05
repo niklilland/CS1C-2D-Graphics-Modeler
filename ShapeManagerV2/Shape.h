@@ -1,7 +1,7 @@
 /*
  * Shape.h
  *
- *  Created on: 2019Äê11ÔÂ7ÈÕ
+ *  Created on: 2019ï¿½ï¿½11ï¿½ï¿½7ï¿½ï¿½
  *      Author: Leon
  */
 
@@ -23,7 +23,6 @@ enum class ShapeType{
 class Shape
 {
 	public:
-	    
 		Shape(QPaintDevice* device = nullptr,int id = -1, ShapeType shape = NoShape);//constructor
 		virtual ~Shape(){};//destructor
 		

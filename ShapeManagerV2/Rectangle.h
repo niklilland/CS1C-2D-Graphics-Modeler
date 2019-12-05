@@ -13,8 +13,14 @@
 class Rectangle : public Shape
 {
 	public:
-		Rectangle(QPaintDevice* device = nullptr,int id = -1) : Shape{device, id, ShapeType::Rectangle}{}
-		~Rectangle() override{}
+        // Constructor
+        Rectangle(QPaintDevice* device = nullptr,int id = -1) : Shape{ device, id, ShapeType::Rectangle }
+        { }
+
+        // Destructor
+        ~Rectangle() override
+        { }
+
 		bool isSquare() const;
 		void set_rect(const QRect& rect);
 		void draw(const int translate_x = 0, const int translate_y = 0) override;
@@ -24,7 +30,7 @@ class Rectangle : public Shape
 
 bool Rectangle::isSquare() const
 {
-	return rect.width()==rect.length();
+    return rect.width()==rect.height();
 }
 
 void Rectangle::set_rect(const QRect& rect)
@@ -32,8 +38,8 @@ void Rectangle::set_rect(const QRect& rect)
 	this->rect = rect;
 }
 
-void Rectangle::draw(const int translate_x = 0, const int translate_y = 0)
+void Rectangle::draw(const int translate_x, const int translate_y)
 {
-	qpainter.drawRect(rect);
+    qpainter.drawRect(translate_x, translate_y, rect.width(), rect.height());
 }
 #endif /* RECTANGLE_H_ */

@@ -13,8 +13,14 @@
 class Line : public Shape
 {
 	public:
-		Line(QPaintDevice* device = nullptr, int id = -1) : Shape{device,id,Shape::Line}{}
-		~Line() override{}
+        // Constructor
+        Line(QPaintDevice* device, int id) : Shape{ device, id, ShapeType::Line }
+        { }
+
+        // Destructor
+        ~Line() override
+        { }
+
 
 		void set_point(const QPoint& point_begin, const QPoint& point_end);
 		void draw(const int translate_x =0, const int translate_y = 0) override;
@@ -23,6 +29,18 @@ class Line : public Shape
 
 };
 
+
+void Line::set_point(const QPoint& point_begin, const QPoint& point_end)
+{
+    points.clear();
+    points.push_back(point_begin);
+    points.push_back(point_end);
+}
+
+void Line::draw(const int translate_x, const int translate_y)
+{
+    qpainter.drawLine(points.at(0), points.at(1));
+}
 
 
 #endif /* LINE_H_ */

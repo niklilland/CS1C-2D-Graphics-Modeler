@@ -254,8 +254,16 @@ DIST          = ../../../../Qt/5.12.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.12.5/clang_64/mkspecs/features/exceptions.prf \
 		../../../../Qt/5.12.5/clang_64/mkspecs/features/yacc.prf \
 		../../../../Qt/5.12.5/clang_64/mkspecs/features/lex.prf \
-		../ShapeManagerV2/ShapeManagerV2.pro ../ShapeManagerV2/mainwindow.h \
-		../ShapeManagerV2/renderarea.h ../ShapeManagerV2/main.cpp \
+		../ShapeManagerV2/ShapeManagerV2.pro ../ShapeManagerV2/Ellipse.h \
+		../ShapeManagerV2/Line.h \
+		../ShapeManagerV2/Polygon.h \
+		../ShapeManagerV2/Polyline.h \
+		../ShapeManagerV2/Rectangle.h \
+		../ShapeManagerV2/Shape.h \
+		../ShapeManagerV2/Text.h \
+		../ShapeManagerV2/mainwindow.h \
+		../ShapeManagerV2/renderarea.h \
+		../ShapeManagerV2/vector.h ../ShapeManagerV2/main.cpp \
 		../ShapeManagerV2/mainwindow.cpp \
 		../ShapeManagerV2/renderarea.cpp
 QMAKE_TARGET  = ShapeManagerV2
@@ -705,7 +713,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../../Qt/5.12.5/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../ShapeManagerV2/mainwindow.h ../ShapeManagerV2/renderarea.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../ShapeManagerV2/Ellipse.h ../ShapeManagerV2/Line.h ../ShapeManagerV2/Polygon.h ../ShapeManagerV2/Polyline.h ../ShapeManagerV2/Rectangle.h ../ShapeManagerV2/Shape.h ../ShapeManagerV2/Text.h ../ShapeManagerV2/mainwindow.h ../ShapeManagerV2/renderarea.h ../ShapeManagerV2/vector.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../ShapeManagerV2/main.cpp ../ShapeManagerV2/mainwindow.cpp ../ShapeManagerV2/renderarea.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../ShapeManagerV2/mainwindow.ui $(DISTDIR)/
 

@@ -32,3 +32,9 @@ void MainWindow::generateCumulativeReportClicked()
 
 void MainWindow::submitFeedbackClicked()
 { }
+
+void MainWindow::loginClicked()
+{ }
+
+void MainWindow::logoutClicked()
+{ }

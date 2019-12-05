@@ -42,62 +42,63 @@ public:
 	void resize(int newsize);
 
 	// add one element to the back of the vector
-	void push_back(double d);
+	void push_back(T newElem);
 
 
-	template <typename T>
+	//template <typename T>
 	using iterator = T * ;
 
-	template <typename T>
+	//template <typename T>
 	using const_iterator = const T *;
 
-	template <typename T>
-	iterator<T> begin() // points to first element
+	//template <typename T>
+	iterator begin() // points to first element
 	{
 		if (size_v == 0)
 			return nullptr;
 		return &elem[0];
 	}
 
-	template <typename T>
-	const_iterator<T> begin() const
+	//template <typename T>
+	const_iterator begin() const
 	{
 		if (size_v == 0)
 			return nullptr;
 		return &elem[0];
 	}
 
-	template <typename T>
-	iterator<T> end() // points to one beyond the last element
+	//template <typename T>
+	iterator end() // points to one beyond the last element
 	{
 		if (size_v == 0)
 			return nullptr;
 		return &elem[size_v];
 	}
 
-	template <typename T>
-	const_iterator<T> end() const
+	//template <typename T>
+	const_iterator end() const
 	{
 		if (size_v == 0)
 			return nullptr;
 		return &elem[size_v];
 	}
 
-	template <typename T>
-	iterator<T> insert(iterator<T> p, const double &val) // insert a new element val before p
+	//template <typename T>
+	iterator insert(iterator p, const T &val) // insert a new element val before p
 	{
-		// make sure we have space
-
-		// the place to put value
-
-		// copy element one position to the right
-		// insert value
-
-		return nullptr; // temp remove & replace
+		int index = p - begin();
+		if (size() == capacity())
+			reserve(size() = 0 ? 8 : 2 * size());
+		++size_v;
+		iterator pp = begin() + index;
+		for (iterator pos = end() - 1; pos != pp; --pos)
+			*pos = *(pos - 1);
+		*(begin() + index) = val;
+		return pp;
 	}
 
-	template <typename T>
-	iterator<T> erase(iterator<T> p) // remove element pointed to by p
+	//template <typename T>
+	iterator erase(iterator p) // remove element pointed to by p
 	{
 		if (p == end())
 			return p;
@@ -157,7 +158,7 @@ Vector<T>::Vector(const Vector &otherVector)
 template<typename T>
 const Vector<T>& Vector<T>::operator=(const Vector<T> &otherVector) // copy assignment
 {
-	double *p = new double[otherVector.size_v];       // allocate new space
+	T *p = new T[otherVector.size_v];       // allocate new space
 	copy(otherVector.elem, otherVector.elem + otherVector.size_v, p); // copy elements - std::copy() algorithm
 	delete[] elem;                            // deallocate old space
 	elem = p;                                 // now we can reset elem
@@ -186,12 +187,10 @@ int Vector<T>::capacity() const
 template <typename T>
 void Vector<T>::reserve(int newalloc)
 {
-	int newCapacity;
 	T *temp;
 	// never decrease allocation
 
-	newCapacity = (vectorCapacity / 2) + vectorCapacity;
-	vectorCapacity = newCapacity;
+	vectorCapacity = newalloc;
 
 	// allocate new space
 	temp = new T[size_v];
@@ -223,14 +222,14 @@ void Vector<T>::resize(int newsize) // growth
 }
 
 template <typename T>
-void Vector<T>::push_back(double d)
+void Vector<T>::push_back(T newElem)
 // increase vector size by one; initialize the new element with d
 {
 	if (vectorCapacity == 0)
 		reserve(8);         // start with space for 8 elements
 	else if (size_v == vectorCapacity)
 		reserve(2 * vectorCapacity); // get more space
-	elem[size_v] = d;       // add d at end
+	elem[size_v] = newElem;       // add d at end
 	++size_v;               // increase the size (size_v is the number of elements)
 }
 

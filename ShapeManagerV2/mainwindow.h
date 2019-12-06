@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtWidgets>
 
 class RenderArea;
 QT_BEGIN_NAMESPACE
@@ -34,7 +35,14 @@ private slots:
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
+    QGridLayout* addShapeLayout;
     QComboBox* shapeComboBox;
+    QComboBox* penStyleComboBox;
+    QComboBox* penCapComboBox;
+    QComboBox* penJoinComboBox;
+    QComboBox* brushStyleComboBox;
+    QSpinBox* penWidthSpinBox;
+
     bool loggedIn = false;
 };
 

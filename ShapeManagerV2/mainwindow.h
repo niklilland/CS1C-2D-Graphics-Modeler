@@ -34,6 +34,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
+    QComboBox* shapeComboBox;
+    bool loggedIn = false;
 };
 
 #endif // MAINWINDOW_H

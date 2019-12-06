@@ -16,7 +16,7 @@
 
 using namespace std;
 
-enum class ShapeType{ Line, Polyline, Polygon, Rectangle, Ellipse, Text };
+enum ShapeType{ Line, Polyline, Polygon, Rectangle, Ellipse, Text };
 
 class Shape
 {

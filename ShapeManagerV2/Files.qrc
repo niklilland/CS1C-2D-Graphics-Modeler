@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/storage">
+        <file>shapes.bin</file>
+        <file>testimonials.bin</file>
+    </qresource>
+</RCC>

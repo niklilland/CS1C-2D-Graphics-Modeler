@@ -35,13 +35,15 @@ private slots:
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
-    QGridLayout* addShapeLayout;
-    QComboBox* shapeComboBox;
-    QComboBox* penStyleComboBox;
-    QComboBox* penCapComboBox;
-    QComboBox* penJoinComboBox;
-    QComboBox* brushStyleComboBox;
-    QSpinBox* penWidthSpinBox;
+
+    // colors
+    QColor red = QColor("red");
+    QColor orange = QColor("orange");
+    QColor yellow = QColor("yellow");
+    QColor green = QColor("green");
+    QColor blue = QColor("blue");
+    QColor indigo = QColor("indigo");
+    QColor violet = QColor("violet");
 
     bool loggedIn = false;
 };

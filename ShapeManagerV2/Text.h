@@ -13,7 +13,7 @@ class Text : public Shape
 {
 	public:
         // Constructor
-        Text(QPaintDevice* device = nullptr, int id = -1) : Shape { device, id, ShapeType::Text }
+        Text(QPaintDevice* device, int id ) : Shape { device, id, ShapeType::Text }
         { }
 
         // Destructor
@@ -41,6 +41,16 @@ void Text::set_rect(const QRect& rect)
 
 void Text::draw(const int translate_x, const int translate_y)
 {
-	//qpainter.drawText(rect,text)   //not completed
+	QRect*boundingRect = nullptr;
+	QFont font;
+	font.setStyle(style);
+	font.setWeight(weight);
+	qpainter.setFont(font);
+	qpainter.drawText(rect,align,text,boundingRect);
+}
+
+void Text::setText(const QString str)
+{
+	text = str;
 }
 #endif /* TEXT_H_ */

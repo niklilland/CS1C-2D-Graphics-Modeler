@@ -14,8 +14,14 @@ class Rectangle : public Shape
 {
 	public:
         // Constructor
-        Rectangle(QPaintDevice* device = nullptr,int id = -1) : Shape{ device, id, ShapeType::Rectangle }
-        { }
+        Rectangle(QPaintDevice* device ,int id, QColor xPenColor,
+                qreal              xPenWidth,
+                Qt::PenStyle       xPenStyle,
+                Qt::PenCapStyle    xPenCapStyle,
+                Qt::PenJoinStyle   xPenJoinStyle,
+                QColor             xBrushColor,
+                Qt::BrushStyle     xBrushStyle) : Shape{ device, id, ShapeType::Rectangle,xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
+   {}
 
         // Destructor
         ~Rectangle() override

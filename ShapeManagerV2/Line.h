@@ -14,7 +14,13 @@ class Line : public Shape
 {
 	public:
         // Constructor
-        Line(QPaintDevice* device, int id) : Shape{ device, id, ShapeType::Line }
+        Line(QPaintDevice* device, int id, QColor xPenColor,
+                qreal              xPenWidth,
+                Qt::PenStyle       xPenStyle,
+                Qt::PenCapStyle    xPenCapStyle,
+                Qt::PenJoinStyle   xPenJoinStyle,
+                QColor             xBrushColor,
+                Qt::BrushStyle     xBrushStyle) : Shape{ device, id, ShapeType::Line, xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
         { }
 
         // Destructor

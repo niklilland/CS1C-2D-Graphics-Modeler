@@ -23,7 +23,24 @@ class Shape
 {
 	public:
         // constructor
-        Shape(QPaintDevice* device, int id, ShapeType shape);
+        Shape(QPaintDevice* device, int id, ShapeType shape, QColor xPenColor,
+                qreal              xPenWidth,
+                Qt::PenStyle       xPenStyle,
+                Qt::PenCapStyle    xPenCapStyle,
+                Qt::PenJoinStyle   xPenJoinStyle,
+                QColor             xBrushColor,
+                Qt::BrushStyle     xBrushStyle): device{device}, shapeId{xId}, typeShape{s}, painter{device} {
+
+
+	        pen.setColor(xPenColor);
+	        pen.setWidth(xPenWidth);
+	        pen.setStyle(xPenStyle);
+	        pen.setCapStyle(xPenCapStyle);
+	        pen.setJoinStyle(xPenJoinStyle);
+
+	        brush.setColor(xBrushColor);
+	        brush.setStyle(xBrushStyle);
+        }
         // destructor
         virtual ~Shape() = 0;
 		

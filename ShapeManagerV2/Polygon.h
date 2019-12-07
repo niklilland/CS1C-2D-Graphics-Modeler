@@ -14,7 +14,13 @@ class Polygon : public Shape
 {
 	public:
         // Constructor
-        Polygon(QPaintDevice* device, int id) : Shape{ device, id, ShapeType::Polygon }
+        Polygon(QPaintDevice* device, int id,QColor xPenColor,
+                qreal              xPenWidth,
+                Qt::PenStyle       xPenStyle,
+                Qt::PenCapStyle    xPenCapStyle,
+                Qt::PenJoinStyle   xPenJoinStyle,
+                QColor             xBrushColor,
+                Qt::BrushStyle     xBrushStyle) : Shape{ device, id, ShapeType::Polygon, xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
         { }
 
         // Destructor

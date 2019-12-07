@@ -2,6 +2,9 @@
 #include "renderarea.h"
 #include "ui_mainwindow.h"
 #include "shape.h"
+#include "Rectangle.h"
+
+const int IdRole = Qt::UserRole;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -26,7 +29,7 @@ void MainWindow::addShapeClicked()
     QGridLayout* addShapeLayout = new QGridLayout;
 
     // Create shape options
-    QComboBox* shapeComboBox = new QComboBox;
+    shapeComboBox = new QComboBox;
     shapeComboBox->addItem("Line", ShapeType::Line);
     shapeComboBox->addItem("Polyline", ShapeType::Polyline);
     shapeComboBox->addItem("Polygon", ShapeType::Polygon);
@@ -37,7 +40,7 @@ void MainWindow::addShapeClicked()
     shapeLabel->setBuddy(shapeComboBox);
 
     // Create pen color QComboBox
-    QComboBox* penColorComboBox = new QComboBox;
+    penColorComboBox = new QComboBox;
     penColorComboBox->addItem("Red", red);
     penColorComboBox->addItem("Orange", orange);
     penColorComboBox->addItem("Yellow", yellow);
@@ -49,7 +52,7 @@ void MainWindow::addShapeClicked()
     penColorLabel->setBuddy(penColorComboBox);
 
     // Create pen width input
-    QSpinBox* penWidthSpinBox = new QSpinBox;
+    penWidthSpinBox = new QSpinBox;
     penWidthSpinBox->setValue(1);
     penWidthSpinBox->setMinimum(1);
     penWidthSpinBox->setMaximum(12);
@@ -57,7 +60,7 @@ void MainWindow::addShapeClicked()
     penWidthLabel->setBuddy(penWidthSpinBox);
 
     // Create pen style options
-    QComboBox* penStyleComboBox = new QComboBox;
+    penStyleComboBox = new QComboBox;
     penStyleComboBox->addItem("Solid", static_cast<int>(Qt::SolidLine));
     penStyleComboBox->addItem("Dash", static_cast<int>(Qt::DashLine));
     penStyleComboBox->addItem("Dot", static_cast<int>(Qt::DotLine));
@@ -68,7 +71,7 @@ void MainWindow::addShapeClicked()
     penStyleLabel->setBuddy(penStyleComboBox);
 
     // Create pen cap options
-    QComboBox* penCapComboBox = new QComboBox;
+    penCapComboBox = new QComboBox;
     penCapComboBox->addItem("Flat", Qt::FlatCap);
     penCapComboBox->addItem("Square", Qt::SquareCap);
     penCapComboBox->addItem("Round", Qt::RoundCap);
@@ -76,7 +79,7 @@ void MainWindow::addShapeClicked()
     penCapLabel->setBuddy(penCapComboBox);
 
     // Create pen join options
-    QComboBox* penJoinComboBox = new QComboBox;
+    penJoinComboBox = new QComboBox;
     penJoinComboBox->addItem("Miter", Qt::MiterJoin);
     penJoinComboBox->addItem("Bevel", Qt::BevelJoin);
     penJoinComboBox->addItem("Round", Qt::RoundJoin);
@@ -84,7 +87,7 @@ void MainWindow::addShapeClicked()
     penJoinLabel->setBuddy(penJoinComboBox);
 
     // Create brush color QComboBox
-    QComboBox* brushColorComboBox = new QComboBox;
+    brushColorComboBox = new QComboBox;
     brushColorComboBox->addItem("Red", red);
     brushColorComboBox->addItem("Orange", orange);
     brushColorComboBox->addItem("Yellow", yellow);
@@ -96,7 +99,7 @@ void MainWindow::addShapeClicked()
     brushColorLabel->setBuddy(brushColorComboBox);
 
     // Create brush style options
-    QComboBox* brushStyleComboBox = new QComboBox;
+    brushStyleComboBox = new QComboBox;
     brushStyleComboBox->addItem(tr("Linear Gradient"), static_cast<int>(Qt::LinearGradientPattern));
     brushStyleComboBox->addItem(tr("Radial Gradient"), static_cast<int>(Qt::RadialGradientPattern));
     brushStyleComboBox->addItem(tr("Conical Gradient"), static_cast<int>(Qt::ConicalGradientPattern));
@@ -120,12 +123,12 @@ void MainWindow::addShapeClicked()
     brushStyleLabel->setBuddy(brushStyleComboBox);
 
     // Text string field
-    QLineEdit* textStringField = new QLineEdit;
+    textStringField = new QLineEdit;
     QLabel* textStringLabel = new QLabel("Text String");
     textStringLabel->setBuddy(textStringField);
 
     // Text color field
-    QComboBox* textColorComboBox = new QComboBox;
+    textColorComboBox = new QComboBox;
     textColorComboBox->addItem("Red", red);
     textColorComboBox->addItem("Orange", orange);
     textColorComboBox->addItem("Yellow", yellow);
@@ -137,7 +140,7 @@ void MainWindow::addShapeClicked()
     textColorLabel->setBuddy(textColorComboBox);
 
     // Text alignment
-    QComboBox* textAlignmentComboBox = new QComboBox;
+    textAlignmentComboBox = new QComboBox;
     textAlignmentComboBox->addItem("Top", Qt::AlignTop);
     textAlignmentComboBox->addItem("Bottom", Qt::AlignBottom);
     textAlignmentComboBox->addItem("Left", Qt::AlignLeft);
@@ -147,7 +150,7 @@ void MainWindow::addShapeClicked()
     textAlignmentLabel->setBuddy(textAlignmentComboBox);
 
     // Text Point size
-    QSpinBox* textPointSizeSpinBox = new QSpinBox;
+    textPointSizeSpinBox = new QSpinBox;
     textPointSizeSpinBox->setValue(1);
     textPointSizeSpinBox->setMinimum(1);
     textPointSizeSpinBox->setMaximum(12);
@@ -155,23 +158,23 @@ void MainWindow::addShapeClicked()
     textPointSizeLabel->setBuddy(textPointSizeSpinBox);
 
     // Text Font Family
-    QComboBox* textFontFamilyComboBox = new QComboBox;
-    textFontFamilyComboBox->addItem("Times", QFont("Times"));
-    textFontFamilyComboBox->addItem("Helvetica", QFont("Helvetica"));
-    textFontFamilyComboBox->addItem("Arial", QFont("Arial"));
-    textFontFamilyComboBox->addItem("Papyrus", QFont("Papyrus"));
+    textFontFamilyComboBox = new QComboBox;
+    textFontFamilyComboBox->addItem("Times", "Times");
+    textFontFamilyComboBox->addItem("Helvetica", "Helvetica");
+    textFontFamilyComboBox->addItem("Arial", "Arial");
+    textFontFamilyComboBox->addItem("Papyrus", "Papyrus");
     QLabel* textFontFamilyLabel = new QLabel("Text Font Family");
     textFontFamilyLabel->setBuddy(textFontFamilyComboBox);
 
     // Text Font Style
-    QComboBox* textFontStyleComboBox = new QComboBox;
+    textFontStyleComboBox = new QComboBox;
     textFontStyleComboBox->addItem("Normal", QFont::StyleNormal);
     textFontStyleComboBox->addItem("Italic", QFont::StyleItalic);
     QLabel* textFontStyleLabel = new QLabel("Text Font Style");
     textFontStyleLabel->setBuddy(textFontStyleComboBox);
 
     // Text Font Weight
-    QComboBox* textFontWeightComboBox = new QComboBox;
+    textFontWeightComboBox = new QComboBox;
     textFontWeightComboBox->addItem("Thin", QFont::Thin);
     textFontWeightComboBox->addItem("ExtraLight", QFont::ExtraLight);
     textFontWeightComboBox->addItem("Light", QFont::Light);
@@ -222,19 +225,46 @@ void MainWindow::addShapeClicked()
     addShapeLayout->addWidget(textFontStyleComboBox, 6, 3);
     addShapeLayout->addWidget(textFontWeightComboBox, 7, 3);
 
-
-    // TODO: Add PushButton and connect its signal a mainwindow slot by using `connect` (See BasicDrawing example)
+    // Add Shape button
     QPushButton* addShapeButton = new QPushButton;
     addShapeButton->setText("Add Shape");
+    addShapeLayout->addWidget(addShapeButton, 9, 3);
 
-    // connect(addShapeButton, SIGNAL(clicked(bool)), renderArea, SLOT(setShape(Shape)));
-    // button clicked
+    // On add shape clicked, call MainWindow::addShapeSubmitted()
+    connect(addShapeButton, SIGNAL(clicked(bool)), this, SLOT(addShapeSubmitted()));
 
 
     // add layout to dialog
     addShapeDialog.setLayout(addShapeLayout);
     // show the dialog
     addShapeDialog.exec();
+}
+
+void MainWindow::addShapeSubmitted()
+{
+    // 1. Get options
+
+    ShapeType shape = ShapeType(shapeComboBox->itemData(shapeComboBox->currentIndex(), IdRole).toInt());
+    QColor penColor = QColor(penColorComboBox->itemData(penColorComboBox->currentIndex(), IdRole).toInt());
+    Qt::PenStyle penStyle = Qt::PenStyle(penStyleComboBox->itemData(penStyleComboBox->currentIndex(), IdRole).toInt());
+    Qt::PenCapStyle penCap = Qt::PenCapStyle(penCapComboBox->itemData(penCapComboBox->currentIndex(), IdRole).toInt());
+    Qt::PenJoinStyle penJoin = Qt::PenJoinStyle(penJoinComboBox->itemData(penJoinComboBox->currentIndex(), IdRole).toInt());
+    Qt::BrushStyle brushStyle = Qt::BrushStyle(brushStyleComboBox->itemData(brushStyleComboBox->currentIndex(), IdRole).toInt());
+    QColor brushColor = QColor(brushColorComboBox->itemData(brushColorComboBox->currentIndex(), IdRole).toInt());
+    Qt::AlignmentFlag textAlignment = Qt::AlignmentFlag(textAlignmentComboBox->itemData(textAlignmentComboBox->currentIndex(), IdRole).toInt());
+    QColor textColor = QColor(textColorComboBox->itemData(textColorComboBox->currentIndex(), IdRole).toInt());
+    QFont::Style textFontStyle = QFont::Style(textFontStyleComboBox->itemData(textFontStyleComboBox->currentIndex(), IdRole).toInt());
+    QFont textFontFamily = QFont(textFontFamilyComboBox->itemData(textFontFamilyComboBox->currentIndex(), IdRole).toString());
+    QFont::Weight textWeightStyle = QFont::Weight(textFontWeightComboBox->itemData(textFontWeightComboBox->currentIndex(), IdRole).toInt());
+    int penWidth = penWidthSpinBox->value();
+    int textPointSize = textPointSizeSpinBox->value();
+    QString textString = textStringField->text();
+
+    // 2. Create Shape
+
+    // 3. Write shape to file
+
+    // 4. Re-draw the renderarea
 }
 
 void MainWindow::removeShapeClicked()

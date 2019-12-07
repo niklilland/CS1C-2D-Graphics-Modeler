@@ -24,6 +24,7 @@ public:
 
 private slots:
     void addShapeClicked();
+    void addShapeSubmitted();
     void removeShapeClicked();
     void generateShapeReportClicked();
     void generateLineReportClicked();
@@ -35,6 +36,23 @@ private slots:
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
+
+    // Add shape widgets
+    QComboBox* shapeComboBox;
+    QComboBox* penColorComboBox;
+    QSpinBox* penWidthSpinBox;
+    QComboBox* penStyleComboBox;
+    QComboBox* penCapComboBox;
+    QComboBox* penJoinComboBox;
+    QComboBox* brushColorComboBox;
+    QComboBox* brushStyleComboBox;
+    QLineEdit* textStringField;
+    QComboBox* textColorComboBox;
+    QComboBox* textAlignmentComboBox;
+    QSpinBox* textPointSizeSpinBox;
+    QComboBox* textFontFamilyComboBox;
+    QComboBox* textFontStyleComboBox;
+    QComboBox* textFontWeightComboBox;
 
     // colors
     QColor red = QColor("red");

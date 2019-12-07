@@ -20,8 +20,18 @@ class Polygon : public Shape
                 Qt::PenCapStyle    xPenCapStyle,
                 Qt::PenJoinStyle   xPenJoinStyle,
                 QColor             xBrushColor,
-                Qt::BrushStyle     xBrushStyle) : Shape{ device, id, ShapeType::Polygon, xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
-        { }
+                Qt::BrushStyle     xBrushStyle
+				const std::vector<QPoint> &xPoints) : Shape{ device, id, ShapeType::Polygon},points{xPoints}
+        {
+	        pen.setColor(xPenColor);
+	        pen.setWidth(xPenWidth);
+	        pen.setStyle(xPenStyle);
+	        pen.setCapStyle(xPenCapStyle);
+	        pen.setJoinStyle(xPenJoinStyle);
+
+	        brush.setColor(xBrushColor);
+	        brush.setStyle(xBrushStyle);
+        }
 
         // Destructor
         ~Polygon() override
@@ -47,8 +57,9 @@ void Polygon::draw(const int translate_x, const int translate_y)
 
     for (int i = 0; i < points.size(); i++)
        convertedArray[i] = points.at(i);
-
+    qpainter.begin(device);
     qpainter.drawPolygon(convertedArray, points.size());
+    qpainter.end();
 }
 
 float Polygon::perimeter()

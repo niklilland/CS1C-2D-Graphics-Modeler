@@ -23,13 +23,7 @@ class Shape
 {
 	public:
         // constructor
-        Shape(QPaintDevice* device, int id, ShapeType shape, QColor xPenColor,
-                qreal              xPenWidth,
-                Qt::PenStyle       xPenStyle,
-                Qt::PenCapStyle    xPenCapStyle,
-                Qt::PenJoinStyle   xPenJoinStyle,
-                QColor             xBrushColor,
-                Qt::BrushStyle     xBrushStyle): device{device}, shapeId{xId}, typeShape{s}, painter{device} {
+        Shape(QPaintDevice* device, int id, ShapeType shape): device{device}, shapeId{xId}, typeShape{s}, painter{device} {
 
 
 	        pen.setColor(xPenColor);
@@ -63,8 +57,9 @@ class Shape
 	protected:
 		QPainter& getQpainter();
         QPainter qpainter;
-		
+        QPaintDevice *device;  ///< QPainter variable - responsible for the drawing of the shapes in the viewing area
 	private:
+
         ShapeType shape;
         int shapeID;
 		QPen pen;

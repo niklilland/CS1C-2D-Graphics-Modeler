@@ -20,8 +20,27 @@ class Rectangle : public Shape
                 Qt::PenCapStyle    xPenCapStyle,
                 Qt::PenJoinStyle   xPenJoinStyle,
                 QColor             xBrushColor,
-                Qt::BrushStyle     xBrushStyle) : Shape{ device, id, ShapeType::Rectangle,xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
-   {}
+                Qt::BrushStyle     xBrushStyle,
+				int                xTopLeftX,
+				int                xTopLeftY,
+				int                xWidth,
+				int                xHeight) : Shape{ device, id, ShapeType::Rectangle}
+   {
+       pen.setColor(xPenColor);
+       pen.setWidth(xPenWidth);
+       pen.setStyle(xPenStyle);
+       pen.setCapStyle(xPenCapStyle);
+       pen.setJoinStyle(xPenJoinStyle);
+
+       brush.setColor(xBrushColor);
+       brush.setStyle(xBrushStyle);
+       // object specific transform from points supplied to bounding points
+       QPoint ul(xTopLeftX,xTopLeftY);
+       upperleft = ul;
+       QPoint lr(xTopLeftX+xWidth, xTopLeftY+xHeight);
+       lowerright = lr;
+       rect(upperleft, lowerright);
+   }
 
         // Destructor
         ~Rectangle() override
@@ -33,6 +52,8 @@ class Rectangle : public Shape
 		float perimeter() override;
         float area() override;
 	private:
+        QPoint upperleft;   ///< Lower right anchor for bounding rectangle
+        QPoint lowerright;  ///< vector containing endpints and vertices of line objects
 		QRect rect;
 };
 
@@ -48,7 +69,9 @@ void Rectangle::set_rect(const QRect& rect)
 
 void Rectangle::draw(const int translate_x, const int translate_y)
 {
+	qpainter.begin(device);
     qpainter.drawRect(translate_x, translate_y, rect.width(), rect.height());
+    qpainter.end();
 }
 
 float Rectangle::perimeter()

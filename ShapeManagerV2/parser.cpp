@@ -810,7 +810,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
             {
 
-                Line *line = new Line(device, shapeId);
+                Line *line = new Line(device, shapeId,PenColor,penWidth,PenStyle,PenCapStyle,PenJoinStyle);
                 pShapeVector->push_back((Shape *)&line1);
 
             }
@@ -819,7 +819,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
             {
 
-                Polyline *polyline1 = new PolyLine(device, shapeId); //Add Dimensions
+                Polyline *polyline1 = new PolyLine(device, shapeId,PenColor,penWidth,PenStyle,PenCapStyle,PenJoinStyle); //Add Dimensions
 
                 pShapeVector->push_back((Shape *)&polyline1);
 
@@ -833,9 +833,9 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
         else if(shapeName == "Polygon" || shapeName == "Rectangle"
 
-                || shapeName == "Square" || shapeName == "Ellipse"
+                 || shapeName == "Ellipse"
 
-                || shapeName == "Circle") //Different shapes
+                ) //Different shapes
 
         {
 
@@ -891,7 +891,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
             }
 
-            else if(shapeName == "Square")
+     /*       else if(shapeName == "Square")
 
             {
 
@@ -933,7 +933,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
 
 
-            }
+            }*/
 
             else if(shapeName == "Ellipse")
 
@@ -981,7 +981,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
             }
 
-            else if(shapeName == "Circle")
+     /*       else if(shapeName == "Circle")
 
             {
 
@@ -1021,7 +1021,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
                 circleD = stoi(dataDimensions[2]);
 
-            }
+            }*/
 
             else if(shapeName == "Polygon")
 
@@ -1499,6 +1499,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
                                 PenCapStyle, PenJoinStyle, BrushColor, BrushStyle,*newpts1);//ADD DIMENSIONS
 
+
                 pShapeVector->push_back((Shape *)&poly1);
 
             }
@@ -1517,7 +1518,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
             }
 
-            else if(shapeName == "Square")
+            /*else if(shapeName == "Square")
 
             {
 
@@ -1529,7 +1530,7 @@ void readFile(QPaintDevice *device, vector<Shape *> *pShapeVector)
 
                 pShapeVector->push_back((Shape *)&square1);
 
-            }
+            }*/
 
             else if(shapeName == "Ellipse")
 
@@ -2035,7 +2036,7 @@ void writeFile(vector<Shape *> *pShapeVector)
 
         if(shape == 0 || shape == 1 || shape == 2 || shape == 3 ||
 
-           shape == 3 || shape == 4 ||shape == 5 ||shape == 6)
+           shape == 3 || shape == 4 )
 
         {
 
@@ -2059,17 +2060,17 @@ void writeFile(vector<Shape *> *pShapeVector)
 
                          break;
 
-                case 4 : fout << "Square" << endl;
+                case 4 : fout << "Ellipse" << endl;
 
                          break;
 
-                case 5 : fout << "Ellipse" << endl;
+                /*case 5 : fout <<  << endl;
 
                          break;
 
                 case 6 : fout << "Circle" << endl;
 
-                         break;
+                         break;*/
 
             }
 
@@ -2247,7 +2248,7 @@ void writeFile(vector<Shape *> *pShapeVector)
 
 
 
-        if(shape == 2 || shape == 3 ||shape == 3 || shape == 4 ||shape == 5 ||shape == 6)
+        if(shape == 2 || shape == 3 ||shape == 3 || shape == 4 )
 
         {
 
@@ -2353,7 +2354,7 @@ void writeFile(vector<Shape *> *pShapeVector)
 
         }
 
-        else if(shape == 7)
+        else if(shape == 5)
 
         {
 

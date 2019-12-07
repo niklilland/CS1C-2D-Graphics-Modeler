@@ -13,14 +13,20 @@ class Polyline : public Shape
 {
 	public:
     // constructor
-    Polyline(QPaintDevice*device, int id, QColor xPenColor,
+    Polyline(QPaintDevice*device, int id,
+    		QColor xPenColor,
             qreal              xPenWidth,
             Qt::PenStyle       xPenStyle,
             Qt::PenCapStyle    xPenCapStyle,
             Qt::PenJoinStyle   xPenJoinStyle,
-            QColor             xBrushColor,
-            Qt::BrushStyle     xBrushStyle) : Shape { device, id, ShapeType:: Polyline, xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
-    { }
+            ) : Shape { device, id, ShapeType:: Polyline}
+    {
+        pen.setColor(xPenColor);
+        pen.setWidth(xPenWidth);
+        pen.setStyle(xPenStyle);
+        pen.setCapStyle(xPenCapStyle);
+        pen.setJoinStyle(xPenJoinStyle);
+    }
     // destructor
     ~Polyline() override
     { }

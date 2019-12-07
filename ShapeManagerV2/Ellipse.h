@@ -21,8 +21,26 @@ class Ellipse : public Shape
                 Qt::PenCapStyle    xPenCapStyle,
                 Qt::PenJoinStyle   xPenJoinStyle,
                 QColor             xBrushColor,
-                Qt::BrushStyle     xBrushStyle) : Shape{device, id, ShapeType::Ellipse, xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
-        { }
+                Qt::BrushStyle     xBrushStyle,
+				int                xTopLeftX,
+				int                xTopLeftY,
+				int                xWidth,
+				int                xHeight) : Shape{device, id, ShapeType::Ellipse}
+        {
+	        pen.setColor(xPenColor);
+	        pen.setWidth(xPenWidth);
+	        pen.setStyle(xPenStyle);
+	        pen.setCapStyle(xPenCapStyle);
+	        pen.setJoinStyle(xPenJoinStyle);
+
+	        brush.setColor(xBrushColor);
+	        brush.setStyle(xBrushStyle);
+	        QPoint ul(xTopLeftX,xTopLeftY);
+	        upperleft = ul;
+	        QPoint lr(xTopLeftX+xWidth, xTopLeftY+xHeight);
+	        lowerright = lr;
+	        rect(upperleft, lowerright);
+        }
         ~Ellipse() override
         { }
 
@@ -47,7 +65,9 @@ void Ellipse::set_rect(const QRect& rect)
 
 void Ellipse::draw(const int translate_x, const int translate_y)
 {
+	qpainter.begin(device);
     qpainter.drawEllipse(translate_x, translate_y, rect.width(), rect.height());
+    qpainter.end();
 }
 
 float Ellipse::perimeter()

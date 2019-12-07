@@ -67,8 +67,8 @@ class Shape
 	private:
         ShapeType shape;
         int shapeID;
-		QPen qpen;
-		QBrush qbrush;
+		QPen pen;
+		QBrush brush;
 };
 
 ShapeType Shape::getShape() const
@@ -93,22 +93,22 @@ void Shape::setShape(ShapeType s)
 
 void Shape::setPen(Qt::GlobalColor color, int width, Qt::PenStyle style, Qt::PenCapStyle cstyle, Qt::PenJoinStyle jstyle)
 {
-	qpen.setColor(color);
-	qpen.setWidth(width);
-	qpen.setStyle(style);
-	qpen.setCapStyle(cstyle);
-	qpen.setJoinStyle(jstyle);
+	pen.setColor(color);
+	pen.setWidth(width);
+	pen.setStyle(style);
+	pen.setCapStyle(cstyle);
+	pen.setJoinStyle(jstyle);
 }
 
 void Shape::setPen(Qt::GlobalColor color)
 {
-    qpen.setColor(color);
+    pen.setColor(color);
 }
 
 void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle style)
 {
-    qbrush.setColor(color);
-    qbrush.setStyle(style);
+    brush.setColor(color);
+    brush.setStyle(style);
 }
 
 #endif /* SHAPE_H_ */

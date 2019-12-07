@@ -23,6 +23,8 @@ class Polygon : public Shape
 
 		void set_point(const QPoint& point);
 		void draw(const int translate_x = 0, const int translate_y = 0) override;
+		float perimeter() override;
+        float area() override;
 	private:
         vector<QPoint> points;
 };
@@ -43,5 +45,23 @@ void Polygon::draw(const int translate_x, const int translate_y)
     qpainter.drawPolygon(convertedArray, points.size());
 }
 
+float Polygon::perimeter()
+{
+	float p = 0;
+	QPoint tem = points[0];
+	for(int i = 1; i< 4;i++)
+	{
+		p+= sqrt(pow((tem.x()-points[i].x()),2)+pow((tem.y()-points[i].y()),2))
+		tem = points[i];
+	}
+	return p;
 
+}
+
+float Polygon::area()
+{
+	return 0.5*(points[0].x()*points[1].y()-points[1].x()*points[0].y()+points[1].x()*points[2].y()-points[2].x()*points[1].y()+points[2].x()*points[3].y()-points[3].x()*points[2].y()+points[3].x()*points[0].y()-points[0].x()*points[3].y());
+
+
+}
 #endif /* POLYGON_H_ */

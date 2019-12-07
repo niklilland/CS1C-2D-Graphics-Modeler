@@ -13,6 +13,7 @@
 #include <QPainter>
 #include <QPen>
 #include <QBrush>
+#include <cmath>
 
 using namespace std;
 

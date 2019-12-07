@@ -24,6 +24,8 @@ class Rectangle : public Shape
 		bool isSquare() const;
 		void set_rect(const QRect& rect);
 		void draw(const int translate_x = 0, const int translate_y = 0) override;
+		float perimeter() override;
+        float area() override;
 	private:
 		QRect rect;
 };
@@ -41,5 +43,15 @@ void Rectangle::set_rect(const QRect& rect)
 void Rectangle::draw(const int translate_x, const int translate_y)
 {
     qpainter.drawRect(translate_x, translate_y, rect.width(), rect.height());
+}
+
+float Rectangle::perimeter()
+{
+	return (rect.width()*2+rect.length()*2);
+}
+
+float Rectangle::area()
+{
+	return (rect.witdth()*rect.length());
 }
 #endif /* RECTANGLE_H_ */

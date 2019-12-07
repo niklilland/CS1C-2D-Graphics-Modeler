@@ -15,7 +15,13 @@ class Ellipse : public Shape
 {
 	public:
         // constructor
-        Ellipse(QPaintDevice* device, int id) : Shape{device, id, ShapeType::Ellipse}
+        Ellipse(QPaintDevice* device, int id, QColor xPenColor,
+                qreal              xPenWidth,
+                Qt::PenStyle       xPenStyle,
+                Qt::PenCapStyle    xPenCapStyle,
+                Qt::PenJoinStyle   xPenJoinStyle,
+                QColor             xBrushColor,
+                Qt::BrushStyle     xBrushStyle) : Shape{device, id, ShapeType::Ellipse, xPenColor,xPenWidth,xPenStyle,xPenCapStyle,xPenJoinStyle,xBrushColor,xBrushStyle}
         { }
         ~Ellipse() override
         { }

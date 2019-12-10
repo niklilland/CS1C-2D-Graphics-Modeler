@@ -23,18 +23,8 @@ class Shape
 {
 	public:
         // constructor
-        Shape(QPaintDevice* device, int id, ShapeType shape): device{device}, shapeId{xId}, typeShape{s}, painter{device} {
+        Shape(QPaintDevice* device, int id, ShapeType shape): qpainter{device}, device{device}, shape{shape}, shapeID{id} { }
 
-
-	        pen.setColor(xPenColor);
-	        pen.setWidth(xPenWidth);
-	        pen.setStyle(xPenStyle);
-	        pen.setCapStyle(xPenCapStyle);
-	        pen.setJoinStyle(xPenJoinStyle);
-
-	        brush.setColor(xBrushColor);
-	        brush.setStyle(xBrushStyle);
-        }
         // destructor
         virtual ~Shape() = 0;
 		
@@ -43,9 +33,9 @@ class Shape
 		const QBrush& getBrush() const;
 		
 		void setShape(ShapeType shape);
-        void setPen(Qt::GlobalColor,int width, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle);
-		void setPen(Qt::GlobalColor);
-        void setBrush(Qt::GlobalColor, Qt::BrushStyle);
+        void setPen(QColor,int width, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle);
+        void setPen(QColor);
+        void setBrush(QColor, Qt::BrushStyle);
 		
 		
         // pure virtual funstions:
@@ -58,8 +48,8 @@ class Shape
 		QPainter& getQpainter();
         QPainter qpainter;
         QPaintDevice *device;  ///< QPainter variable - responsible for the drawing of the shapes in the viewing area
-	private:
 
+	private:
         ShapeType shape;
         int shapeID;
 		QPen pen;
@@ -73,12 +63,12 @@ ShapeType Shape::getShape() const
 
 const QPen& Shape::getPen() const
 {
-	return qpen;
+    return pen;
 }
 
 const QBrush& Shape::getBrush() const
 {
-	return qbrush;
+    return brush;
 }
 
 void Shape::setShape(ShapeType s)
@@ -86,7 +76,7 @@ void Shape::setShape(ShapeType s)
     shape = s;
 }
 
-void Shape::setPen(Qt::GlobalColor color, int width, Qt::PenStyle style, Qt::PenCapStyle cstyle, Qt::PenJoinStyle jstyle)
+void Shape::setPen(QColor color, int width, Qt::PenStyle style, Qt::PenCapStyle cstyle, Qt::PenJoinStyle jstyle)
 {
 	pen.setColor(color);
 	pen.setWidth(width);
@@ -95,12 +85,12 @@ void Shape::setPen(Qt::GlobalColor color, int width, Qt::PenStyle style, Qt::Pen
 	pen.setJoinStyle(jstyle);
 }
 
-void Shape::setPen(Qt::GlobalColor color)
+void Shape::setPen(QColor color)
 {
     pen.setColor(color);
 }
 
-void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle style)
+void Shape::setBrush(QColor color, Qt::BrushStyle style)
 {
     brush.setColor(color);
     brush.setStyle(style);

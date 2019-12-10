@@ -10,48 +10,52 @@
 
 #include "Shape.h"
 
-class Line : public Shape
+class MyLine : public Shape
 {
 	public:
         // Constructor
-        Line(QPaintDevice* device, int id,
-        		QColor xPenColor,
-                qreal              xPenWidth,
-                Qt::PenStyle       xPenStyle,
-                Qt::PenCapStyle    xPenCapStyle,
-                Qt::PenJoinStyle   xPenJoinStyle,
-                ) : Shape{ device, id, ShapeType::Line}
+        MyLine(QPaintDevice* paintDevice,
+             int id,
+             QColor xPenColor,
+             qreal xPenWidth,
+             Qt::PenStyle xPenStyle,
+             Qt::PenCapStyle xPenCapStyle,
+             Qt::PenJoinStyle xPenJoinStyle) : Shape{ paintDevice, id, ShapeType::Line}
         {
-	        pen.setColor(xPenColor);
-	        pen.setWidth(xPenWidth);
-	        pen.setStyle(xPenStyle);
-	        pen.setCapStyle(xPenCapStyle);
-	        pen.setJoinStyle(xPenJoinStyle);
+            setPen(xPenColor, xPenWidth, xPenStyle, xPenCapStyle, xPenJoinStyle);
         }
 
         // Destructor
-        ~Line() override
+        ~MyLine() override
         { }
 
 
 		void set_point(const QPoint& point_begin, const QPoint& point_end);
 		void draw(const int translate_x =0, const int translate_y = 0) override;
+        void move(const int x, const int y) override;
+        float perimeter() override { return 0; }
+        float area() override { return 0; }
 	private:
 		vector<QPoint> points;
 
 };
 
 
-void Line::set_point(const QPoint& point_begin, const QPoint& point_end)
+void MyLine::set_point(const QPoint& point_begin, const QPoint& point_end)
 {
     points.clear();
     points.push_back(point_begin);
     points.push_back(point_end);
 }
 
-void Line::draw(const int translate_x, const int translate_y)
+void MyLine::draw(const int translate_x, const int translate_y)
 {
     qpainter.drawLine(points.at(0), points.at(1));
+}
+
+void MyLine::move(const int x, const int y)
+{
+    // TODO: implementation
 }
 
 

@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QtWidgets>
+#include "vector.h"
+#include "Shape.h"
 
 class RenderArea;
 QT_BEGIN_NAMESPACE
@@ -36,6 +38,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     RenderArea *renderArea;
+    Vector<Shape> shapes;
+
 
     // Add shape widgets
     QComboBox* shapeComboBox;

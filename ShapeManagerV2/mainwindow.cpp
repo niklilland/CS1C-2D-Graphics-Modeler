@@ -1,8 +1,13 @@
 #include "mainwindow.h"
 #include "renderarea.h"
 #include "ui_mainwindow.h"
-#include "shape.h"
+#include "Shape.h"
+#include "Line.h"
+#include "Polyline.h"
+#include "Polygon.h"
 #include "Rectangle.h"
+#include "Ellipse.h"
+#include "Text.h"
 
 const int IdRole = Qt::UserRole;
 
@@ -100,10 +105,6 @@ void MainWindow::addShapeClicked()
 
     // Create brush style options
     brushStyleComboBox = new QComboBox;
-    brushStyleComboBox->addItem(tr("Linear Gradient"), static_cast<int>(Qt::LinearGradientPattern));
-    brushStyleComboBox->addItem(tr("Radial Gradient"), static_cast<int>(Qt::RadialGradientPattern));
-    brushStyleComboBox->addItem(tr("Conical Gradient"), static_cast<int>(Qt::ConicalGradientPattern));
-    brushStyleComboBox->addItem(tr("Texture"), static_cast<int>(Qt::TexturePattern));
     brushStyleComboBox->addItem(tr("Solid"), static_cast<int>(Qt::SolidPattern));
     brushStyleComboBox->addItem(tr("Horizontal"), static_cast<int>(Qt::HorPattern));
     brushStyleComboBox->addItem(tr("Vertical"), static_cast<int>(Qt::VerPattern));
@@ -245,22 +246,73 @@ void MainWindow::addShapeSubmitted()
     // 1. Get options
 
     ShapeType shape = ShapeType(shapeComboBox->itemData(shapeComboBox->currentIndex(), IdRole).toInt());
+
     QColor penColor = QColor(penColorComboBox->itemData(penColorComboBox->currentIndex(), IdRole).toInt());
     Qt::PenStyle penStyle = Qt::PenStyle(penStyleComboBox->itemData(penStyleComboBox->currentIndex(), IdRole).toInt());
     Qt::PenCapStyle penCap = Qt::PenCapStyle(penCapComboBox->itemData(penCapComboBox->currentIndex(), IdRole).toInt());
     Qt::PenJoinStyle penJoin = Qt::PenJoinStyle(penJoinComboBox->itemData(penJoinComboBox->currentIndex(), IdRole).toInt());
+    int penWidth = penWidthSpinBox->value();
+
     Qt::BrushStyle brushStyle = Qt::BrushStyle(brushStyleComboBox->itemData(brushStyleComboBox->currentIndex(), IdRole).toInt());
     QColor brushColor = QColor(brushColorComboBox->itemData(brushColorComboBox->currentIndex(), IdRole).toInt());
+
     Qt::AlignmentFlag textAlignment = Qt::AlignmentFlag(textAlignmentComboBox->itemData(textAlignmentComboBox->currentIndex(), IdRole).toInt());
     QColor textColor = QColor(textColorComboBox->itemData(textColorComboBox->currentIndex(), IdRole).toInt());
     QFont::Style textFontStyle = QFont::Style(textFontStyleComboBox->itemData(textFontStyleComboBox->currentIndex(), IdRole).toInt());
     QFont textFontFamily = QFont(textFontFamilyComboBox->itemData(textFontFamilyComboBox->currentIndex(), IdRole).toString());
     QFont::Weight textWeightStyle = QFont::Weight(textFontWeightComboBox->itemData(textFontWeightComboBox->currentIndex(), IdRole).toInt());
-    int penWidth = penWidthSpinBox->value();
     int textPointSize = textPointSizeSpinBox->value();
     QString textString = textStringField->text();
 
     // 2. Create Shape
+
+    if (shape == ShapeType::Text) {
+        QPen(textColor, textPointSize);
+        textFontFamily.setStyle(textFontStyle);
+        textFontFamily.setWeight(textWeightStyle);
+
+    } else {
+        QPen(penColor, penWidth, penStyle, penCap, penJoin);
+        QBrush(brushColor, brushStyle);
+    }
+
+
+
+    // painter.drawText(QRect(10, 20, 80, 60), textAlignment, textString);
+
+
+
+    switch (shape) {
+    case ShapeType::Line:
+        {
+            Shape* foo = new MyLine(renderArea, 1, penColor, penWidth, penStyle, penCap, penJoin);
+            shapes.push_back(MyLine(renderArea, 1, penColor, penWidth, penStyle, penCap, penJoin));
+        }
+        case ShapeType::Polyline:
+        {
+            // TODO: Polyline
+        }
+        case ShapeType::Polygon:
+        {
+            // TODO: Polygon
+        }
+        case ShapeType::Rectangle:
+        {
+            // TODO: Rectangle
+        }
+        case ShapeType::Ellipse:
+        {
+            // TODO: Ellipse
+        }
+        case ShapeType::Text:
+        {
+            // TODO: Text
+        }
+    }
+
+
+
+
 
     // 3. Write shape to file
 

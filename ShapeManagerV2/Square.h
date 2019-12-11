@@ -1,9 +1,12 @@
+/*
+ * Square.h
+ *
+ *  Created on: 2019Äê12ÔÂ10ÈÕ
+ *      Author: Leon
+ */
 
-
-#ifndef ELLIPSE_H_
-#define ELLIPSE_H_
-
-#include "Shape.h"
+#ifndef SQUARE_H_
+#define SQUARE_H_
 
 /*****************************************************
  * Pre-processor directives
@@ -11,6 +14,7 @@
 // Standard directives
 #include <iostream>
 #include <math.h>
+
 #include "Shape.h"
 
 using namespace std;
@@ -23,10 +27,8 @@ using namespace std;
 #include <QPainter>// This gives access to the QPainter class, which preforms the painting on widgets and other paint devices
 #include <QPoint>  // This gives access to the QPoint class, which defines points on a plane
 
-//! ellipse class derived from Shape2D
-//!
-//!
-class Ellipse : public Shape2D
+
+class Square : public Shape2D
 {
 public:
     // Note: the data members are public, because we need non class memebers to
@@ -34,7 +36,7 @@ public:
     //       accessors and mutators adds no value.
 
     // Constructor used in class project
-    Ellipse(QPaintDevice* device,
+    Square(QPaintDevice* device,
              int                xId,
              QColor             xPenColor,
              qreal              xPenWidth,
@@ -45,16 +47,14 @@ public:
              Qt::BrushStyle     xBrushStyle,
              int                xTopLeftX,
              int                xTopLeftY,
-             int                xWidth,
-             int                xHeight);
+             int                xSide);
 
-    Ellipse() = delete;         // default constructor never used
-    Ellipse& operator=(const Ellipse&) = delete;  // Disallow copying
-    Ellipse(const Ellipse&) = delete;
-    ~Ellipse();
+    Square() = delete;
+    Square& operator=(const Square&) = delete;  // Disallow copying
+    Square(const Square&) = delete;
+    ~Square();
 
     std::ostream& print(std::ostream& os) const;
-
     void draw(QPaintDevice* device);
     void move(QPoint &newUpperLeft);
     void update(void);
@@ -62,7 +62,7 @@ public:
     double calcArea() const;
 };
 
-Ellipse::Ellipse(QPaintDevice* device,
+Square::Square(QPaintDevice* device,
          int                xId,
          QColor             xPenColor,
          qreal              xPenWidth,
@@ -73,32 +73,31 @@ Ellipse::Ellipse(QPaintDevice* device,
          Qt::BrushStyle     xBrushStyle,
          int                xTopLeftX,
          int                xTopLeftY,
-         int                xWidth,
-         int                xHeight)
-   : Shape2D(device, xId, shapeType::Ellipse,
+         int                xSide)
+   : Shape2D(device, xId, shapeType::Square,
                   xPenColor, xPenWidth, xPenStyle, xPenCapStyle, xPenJoinStyle,
                   xBrushColor, xBrushStyle)
 {
     // object specific transform from points supplied to bounding points
     QPoint ul(xTopLeftX,xTopLeftY);
     upperleft = ul;
-    QPoint lr(xTopLeftX+xWidth, xTopLeftY+xHeight);
+    QPoint lr(xTopLeftX+xSide, xTopLeftY+xSide);
     lowerright = lr;
 }
 
 //! Destructor - simply free the object space
 //!
 //!
-Ellipse::~Ellipse() {};
+Square::~Square() {};
 
 //! print - print limited information about derived instance for debugging
 //!
 //!
 //!
-//! \param os - output stream pointer
+//! \param os - output stream
 //!
 //! \return std::ostream&amp;
-std::ostream& Ellipse::print(std::ostream& os) const
+std::ostream& Square::print(std::ostream& os) const
 {
     return os << " Id:" << getId() << " P:" << calcPerimeter() << " A:" << calcArea();
 };
@@ -108,25 +107,25 @@ std::ostream& Ellipse::print(std::ostream& os) const
 //!
 //!
 //! \param device
-void Ellipse::draw(QPaintDevice* device)
+void Square::draw(QPaintDevice* device)
 {
     QRect rect1(upperleft, lowerright);
     QPainter& paint = get_qPainter();
     paint.begin(device);
     paint.setPen(pen);
     paint.setBrush(brush);
-    paint.drawEllipse(rect1);
+    paint.drawRect(rect1);
     paint.setPen(QPen());
     paint.drawText((upperleft.x()) - 5, (upperleft.y()) - 5, QString::number(this->getId()));
     paint.end();
 }
 
-//! move - relocate circle to new upper left coordinate
+//! move - relocate square to new upper left coordinate
 //!
 //!
 //!
-//! \param newUpperLeft  - new location of upper left of enclosing rectangle
-void Ellipse::move(QPoint &newUpperLeft)
+//! \param newUpperLeft - new location of upper left of enclosing rectangle
+void Square::move(QPoint &newUpperLeft)
 {
     int deltaX = (newUpperLeft.x() - upperleft.x());
     int deltaY = (newUpperLeft.y() - upperleft.y());
@@ -139,27 +138,20 @@ void Ellipse::move(QPoint &newUpperLeft)
 //! update - force redraw of object
 //!
 //!
-//!
-//! \param void
-void Ellipse::update(void)
+void Square::update(void)
 {
     draw((get_qPaintDevice()));
     return;
 }
 
-//! calcPerimeter - determine object outline length using Ramanujan Forumla #1
+//! calcPerimeter - determine object outline length
 //!
 //!
 //!
 //! \return double
-double Ellipse::calcPerimeter() const
+double Square::calcPerimeter() const
 {
-    double len = ((lowerright.x()-upperleft.x()));
-    double ht = ((lowerright.y()-upperleft.y()));
-
-    // Ramanujan Forumla #1
-    return ( (M_PI) * (3*(len-ht) ) -
-              (sqrt( ((3*len)+ht) * (len+(3*ht)) ) ) );
+    return ( ((lowerright.x()-upperleft.x()) * 2) + ((lowerright.y()-upperleft.y()) * 2));
 }
 
 //! calcArea - determine area enclosed by object
@@ -167,8 +159,9 @@ double Ellipse::calcPerimeter() const
 //!
 //!
 //! \return double
-double Ellipse::calcArea() const
+double Square::calcArea() const
 {
-    return ( ( (lowerright.x()-upperleft.x()) / 2) * ( (lowerright.y()-upperleft.y()) / 2) * M_PI);
+    return ( (lowerright.x()-upperleft.x()) * (lowerright.y()-upperleft.y()));
 }
-#endif /* ELLIPSE_H_ */
+
+#endif /* SQUARE_H_ */

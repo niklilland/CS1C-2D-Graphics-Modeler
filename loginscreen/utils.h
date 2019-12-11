@@ -1,10 +1,10 @@
-//File name: utils.h
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Utility Functions for User Management
+//!File name: utils.h
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Utility Functions for User Management
 
 #pragma once
 
@@ -23,6 +23,11 @@
 
 using namespace std;
 
+//! utility functions
+//!
+//! lowerCase - get lower case version of string
+//! loadUserDatabase - retrive user list
+//! saveUserDatabase - save user list
 
 // global constants
 const int MENUWIDTH = 130;

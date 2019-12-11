@@ -1,10 +1,10 @@
-//File name: login.cpp
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Login Module for Final Project 1C
+//!File name: login.cpp
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Login Module for Final Project 1C
 
 #include <iostream>
 #include <string>
@@ -15,6 +15,10 @@
 
 using namespace std;
 
+//! tester/driver for user login module
+//!
+//!
+//!
 // main function
 int dmain()
 {

@@ -1,10 +1,10 @@
-//File name: utils.cpp
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Utility Functions for User Management
+//!File name: utils.cpp
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Utility Functions for User Management
 
 #include "utils.h"
 #include "userType.h"
@@ -14,6 +14,12 @@
 using namespace std;
 
 // get the lower case of a given string - utility function
+//! lowerCase - get lowercase version of given string
+//!
+//!
+//!
+//! \param s - string to convert to lowercase
+//! \return string - lowercase version of s
 string lowerCase(string s) 
 {
 	string lowString;
@@ -25,6 +31,12 @@ string lowerCase(string s)
 }
 
 // load users from database
+
+//! loadUserDatabase - get list of users from user database
+//!
+//!
+//!
+//! \param dbfile - datafile that contains user records, users - return DB here for further processing
 void loadUserDatabase(string dbfile, userLinkedListType& users) 
 {
 	
@@ -62,6 +74,11 @@ void loadUserDatabase(string dbfile, userLinkedListType& users)
 
 
 // save books into database file
+//! saveUserDatabase - save given user list into db file
+//!
+//!
+//!
+//! \param dbfile - datafile that will contain user records, users - userlist to be saved
 void saveUserDatabase(string dbfile, userLinkedListType users) 
 {
 	ofstream outfile;

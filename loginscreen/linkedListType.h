@@ -1,10 +1,10 @@
-//File name: linkedListType.h
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Template for Linked List for Username / Password list
+//!File name: linkedListType.h
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Template for Linked List for Username / Password list
 
 #pragma once
 
@@ -13,6 +13,11 @@
 
 #include "linkedListIterator.h"
 
+//! linked list type - generic linked list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
 template <class Type> 
 class linkedListType { 
 public:
@@ -124,12 +129,24 @@ private:
 	//Postcondition: A copy of otherList is created and assigned to this list
 };
 
+//! isEmptyList - check if list is empty
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 bool linkedListType<Type>::isEmptyList() const
 {
 	return (first == nullptr);
 }
 
+//! linked list default constructor
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 linkedListType<Type>::linkedListType() //default constructor
 {
@@ -138,6 +155,12 @@ linkedListType<Type>::linkedListType() //default constructor
 	count = 0;
 }
 
+//! linked list destroy list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 void linkedListType<Type>::destroyList()
 {
@@ -155,12 +178,24 @@ void linkedListType<Type>::destroyList()
 	count = 0;
 }
 
+//! linked list initialize list - same as destroyList
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 void linkedListType<Type>::initializeList()
 {
 	destroyList(); //if the list has any nodes, delete them
 }
 
+//! linked list print - print contents of linked list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 void linkedListType<Type>::print() const
 {
@@ -175,12 +210,24 @@ void linkedListType<Type>::print() const
 	}
 }//end print
 
+//! linked list length - number of elements in list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 int linkedListType<Type>::length() const
 {
 	return count;
 } //end length
 
+//! linked list front - first element in list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 Type linkedListType<Type>::front() const
 {
@@ -189,6 +236,12 @@ Type linkedListType<Type>::front() const
 	return first->info; //return the info of the first node
 }//end front
 
+//! linked list back - last element in list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 Type linkedListType<Type>::back() const
 {
@@ -196,6 +249,12 @@ Type linkedListType<Type>::back() const
 	return last->info; //return the info of the last node
 }//end back
 
+//! linked list begin - go to start of list for iterator
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 linkedListIterator<Type> linkedListType<Type>::begin()
 {
@@ -204,6 +263,12 @@ linkedListIterator<Type> linkedListType<Type>::begin()
 	return temp;
 }
 
+//! linked list end - last element of iterator (reached end)
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 linkedListIterator<Type> linkedListType<Type>::end()
 {
@@ -212,6 +277,12 @@ linkedListIterator<Type> linkedListType<Type>::end()
 	return temp;
 }
 
+//! linked list copyList - copy list to otherList
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param otherList - destination of copy
 template <class Type>
 void linkedListType<Type>::copyList(const linkedListType<Type>& otherList)
 {
@@ -257,12 +328,24 @@ void linkedListType<Type>::copyList(const linkedListType<Type>& otherList)
 	}//end else
 }//end copyList
 
+//! linked list destructor - generic destructor
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 linkedListType<Type>::~linkedListType() //destructor
 {
 	destroyList();
 }//end destructor
 
+//! linked list copy constructor
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param otherList - destination for copy 
 template <class Type>
 linkedListType<Type>::linkedListType(const linkedListType<Type>& otherList)
 {
@@ -270,7 +353,12 @@ linkedListType<Type>::linkedListType(const linkedListType<Type>& otherList)
 	copyList(otherList);
 }//end copy constructor
 
-//overload the assignment operator
+//! linked list overload assignment operator
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param otherList - copy otherList into new instance
 template <class Type>
 const linkedListType<Type>& linkedListType<Type>::operator=(const linkedListType<Type>& otherList)
 {

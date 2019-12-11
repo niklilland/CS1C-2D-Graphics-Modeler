@@ -1,10 +1,10 @@
-//File name: userType.h
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//User Type Class Definition - managers username, password, and level 
+//!File name: userType.h
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!User Type Class Definition - managers username, password, and level 
 
 #pragma once
 
@@ -19,7 +19,11 @@ using namespace std;
 const int LEVEL1 = 1; // admin user
 const int LEVEL2 = 2; // ordinary user
 
-//class definition
+//! userType class - to represent user record - username, password, level
+//!
+//!
+//!
+//! class definition
 class userType 
 {
 public:

@@ -1,10 +1,10 @@
-//File name: orderedLinkedList.h
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Template for Ordered Linked List for Username / Password list
+//!File name: orderedLinkedList.h
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Template for Ordered Linked List for Username / Password list
 #pragma once
 
 #ifndef ORDEREDLINKEDLIST_H
@@ -12,6 +12,12 @@
 
 #include "linkedListType.h"
 
+//! ordered linked list - generic ordered linked list for sorted lists
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 class orderedLinkedList : public linkedListType<Type>
 {
@@ -27,6 +33,13 @@ public:
 	void deleteNode(const Type& deleteItem);
 };
 
+//! ordered linked list search - for searching ordered list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param searchItem - item we're looking for, loc - return location if found
+//! \return bool - true if item was found, otherwise false
 template <class Type>
 bool orderedLinkedList<Type>::search(const Type& searchItem, nodeType<Type>* loc) const
 {
@@ -50,6 +63,13 @@ bool orderedLinkedList<Type>::search(const Type& searchItem, nodeType<Type>* loc
 	return found;
 }//end search
 
+//! ordered linked list search - for searching ordered list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param searchItem - item we're looking for
+//! \return bool - true if item was found, otherwise false
 template <class Type>
 bool orderedLinkedList<Type>::search(const Type& searchItem) const
 {
@@ -70,6 +90,12 @@ bool orderedLinkedList<Type>::search(const Type& searchItem) const
 	return found;
 }//end search
 
+//! ordered linked list insert - add new item in proper location
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param newItem - item to be added on the list
 template <class Type>
 void orderedLinkedList<Type>::insert(const Type& newItem)
 {
@@ -123,18 +149,36 @@ void orderedLinkedList<Type>::insert(const Type& newItem)
 	}//end else
 }//end insert
 
+//! ordered linked list insertFirst - add new item to the start of the list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param newItem - item to be added
 template <class Type>
 void orderedLinkedList<Type>::insertFirst(const Type& newItem)
 {
 	insert(newItem);
 }//end insertFirst
 
+//! ordered linked list insertLast - add to the end of the list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param newItem - item to be added to the end of the list
 template <class Type>
 void orderedLinkedList<Type>::insertLast(const Type& newItem)
 {
 	insert(newItem);
 }//end insertLast
 
+//! ordered linked list deleteNode - remove item from list
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param deleteItem - target node to be deleted
 template <class Type>
 void orderedLinkedList<Type>::deleteNode(const Type& deleteItem)
 {

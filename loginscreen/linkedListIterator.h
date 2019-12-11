@@ -1,10 +1,10 @@
-//File name: orderedLinkedList.h
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
-//Creation Date: 11/25/2019
-//Date of last modification: 12/10/2019
-//------------------------------------------------------------------------------------------------------------------------------------------
-//Template for Linked List Iterator Username / Password list
+//!File name: orderedLinkedList.h
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Creator's name and email: Bryson Bisuna - bbisuna1@saddleback.edu
+//!Creation Date: 11/25/2019
+//!Date of last modification: 12/10/2019
+//!------------------------------------------------------------------------------------------------------------------------------------------
+//!Template for Linked List Iterator Username / Password list
 
 #pragma once
 
@@ -55,24 +55,48 @@ private:
 };
 
 
+//! linked list iterator - generic iterator
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template <class Type>
 linkedListIterator<Type>::linkedListIterator()
 {
 	current = nullptr;
 }
 
+//! linked list iterator - generic iterator
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param nodeType<Type> 
 template<class Type>
 linkedListIterator<Type>::linkedListIterator(nodeType<Type> *ptr)
 {
 	current = ptr;
 }
 
+//! linked list iterator - dereferencing operator overload *
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template<class Type>
 Type linkedListIterator<Type>::operator*()
 {
 	return current->info;
 }
 
+//! linked list iterator - operator ++ overload
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param none
 template<class Type>
 linkedListIterator<Type> linkedListIterator<Type>::operator++()
 {
@@ -81,11 +105,23 @@ linkedListIterator<Type> linkedListIterator<Type>::operator++()
 	return *this;
 }
 
+//! linked list iterator - operator == overload
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param linkeListIterator<Type> - for right hand comparison
 template <class Type>
 bool linkedListIterator<Type>::operator==(const linkedListIterator<Type>&right) const{
 	return (current == right.current);
 }
 
+//! linked list iterator - operator != overload
+//!
+//!
+//!
+//! \tparam Type - datatype used for template
+//! \param linkeListIterator<Type> - for right hand comparison
 template <class Type> bool linkedListIterator<Type>::operator!=(const linkedListIterator<Type>& right) const {
     return (current != right.current); 
 }

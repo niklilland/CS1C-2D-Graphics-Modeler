@@ -20,4 +20,4 @@ Name: Basel Sweidan
 Individual Contributions: User Stories, Vector Class, parser class, class UML, 3 User cases, also worked on some of the documentation for the user cases.
 
 Name: Ali Hussain
-Individual Contributions: 
+Individual Contributions: User stories, UML diagram, Use-case diagrams & descriptions/documentation. Some work on testimonial functionality, read-in read-out functions and parser class.

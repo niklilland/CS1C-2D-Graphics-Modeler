@@ -1,0 +1,23 @@
+Project Team Contributions
+
+Team name: Solaris
+
+Team Members:
+
+Name: Niklas Lilland
+Individual Contributions: Initialized Git project, initialized QT project, created project UI, user stories, add shape dialog, mocked up project ui, provided git/github guidance, implemented shape subclasses in QT project, render area class, mainwindow class.
+
+Name: Ye Xu
+Individual Contributions: Abstract Shape class, few shape subclasses.
+
+Name: Ziyang Wang
+Individual Contributions: Abstract Shape class, parser class, all of the shape subclasses, testimonial, and report.
+
+Name: Bryson Bisuna
+Individual Contributions: Login screen, user database, ordered list utility (will use for shape report), testimonials, user feedback, work on file parser.
+
+Name: Basel Sweidan
+Individual Contributions: User Stories, Vector Class, parser class, class UML, 3 User cases, also worked on some of the documentation for the user cases.
+
+Name: Ali Hussain
+Individual Contributions: 
